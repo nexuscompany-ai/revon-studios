@@ -103,3 +103,52 @@ body {
 .highlight-mark.is-visible .highlight-mark__sweep {
   scale: 1 1;
 }
+
+/* Certification badges (Founder section): float in from behind/beside Vini's
+   photo with a slight spring overshoot, staggered per card. */
+.cert-badge {
+  opacity: 0;
+  transform: translateY(28px) scale(0.9);
+  transition: opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.reveal.is-visible .cert-badge {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.cert-badge:nth-child(1) {
+  transition-delay: 0.5s;
+}
+.cert-badge:nth-child(2) {
+  transition-delay: 0.68s;
+}
+.cert-badge:nth-child(3) {
+  transition-delay: 0.86s;
+}
+.cert-badge:nth-child(4) {
+  transition-delay: 1.04s;
+}
+
+@media (min-width: 768px) {
+  .cert-badge {
+    transform: translateX(24px) scale(0.9);
+  }
+  .reveal.is-visible .cert-badge {
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Periodic diagonal shine sweep across each certification card. */
+@keyframes shineSweep {
+  0% {
+    transform: translateX(-140%) skewX(-20deg);
+  }
+  32% {
+    transform: translateX(220%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(220%) skewX(-20deg);
+  }
+}
+.shine-sweep {
+  animation: shineSweep 3.4s ease-in-out infinite;
+}
