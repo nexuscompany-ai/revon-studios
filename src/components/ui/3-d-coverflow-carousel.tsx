@@ -181,20 +181,20 @@ export function CoverFlowCarousel({
         {/* Eyebrow */}
         {sectionLabel && (
           <div className="flex items-center gap-3 mb-8">
-            <span style={{ width: "36px", height: "1px", background: "linear-gradient(90deg, transparent, #c5a880)" }} />
+            <span style={{ width: "36px", height: "1px", background: "linear-gradient(90deg, transparent, #ffffff)" }} />
             <h3
               style={{
                 fontSize: "0.75rem",
                 fontWeight: 700,
                 letterSpacing: "0.3em",
                 textTransform: "uppercase",
-                color: "#c5a880",
+                color: "#ffffff",
                 margin: 0,
               }}
             >
               {sectionLabel}
             </h3>
-            <span style={{ width: "36px", height: "1px", background: "linear-gradient(90deg, #c5a880, transparent)" }} />
+            <span style={{ width: "36px", height: "1px", background: "linear-gradient(90deg, #ffffff, transparent)" }} />
           </div>
         )}
 
@@ -259,7 +259,7 @@ export function CoverFlowCarousel({
                   transformOrigin: "center center",
                   transition: "all 800ms cubic-bezier(0.25, 1, 0.5, 1)",
                   boxShadow: isCenter
-                    ? "0 25px 60px rgba(0,0,0,0.9), 0 0 35px rgba(197,168,128,0.25)"
+                    ? "0 25px 60px rgba(0,0,0,0.9), 0 0 35px rgba(255,255,255,0.18)"
                     : "0 15px 35px rgba(0,0,0,0.5)",
                   cursor: isCenter ? "default" : "pointer",
                 }}
@@ -307,22 +307,6 @@ export function CoverFlowCarousel({
                     pointerEvents: isCenter ? "auto" : "none",
                   }}
                 >
-                  {/* Tag */}
-                  <div style={{ textAlign: "right", width: "100%", paddingRight: "4px" }}>
-                    <span
-                      style={{
-                        display: "inline-block",
-                        fontSize: "0.78rem",
-                        fontWeight: 600,
-                        letterSpacing: "0.06em",
-                        color: "rgba(255,255,255,0.9)",
-                        textShadow: "0 2px 6px rgba(0,0,0,0.8)",
-                      }}
-                    >
-                      {item.tag}
-                    </span>
-                  </div>
-
                   {/* Body Content */}
                   <div
                     style={{
@@ -369,10 +353,10 @@ export function CoverFlowCarousel({
                       style={{
                         width: "34px",
                         height: "2px",
-                        backgroundColor: "#c5a880",
+                        backgroundColor: "#ffffff",
                         borderRadius: "2px",
                         margin: "5px auto 4px",
-                        boxShadow: "0 0 8px rgba(197,168,128,0.7)",
+                        boxShadow: "0 0 8px rgba(255,255,255,0.6)",
                       }}
                     />
 
@@ -406,14 +390,14 @@ export function CoverFlowCarousel({
                         gap: "6px",
                         padding: "7px 18px",
                         borderRadius: "9999px",
-                        background: "linear-gradient(135deg, #c5a880 0%, #a48256 100%)",
-                        color: "#110d0c",
+                        background: "#ffffff",
+                        color: "#0c0a09",
                         fontSize: "0.72rem",
                         fontWeight: 800,
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
                         textDecoration: "none",
-                        boxShadow: "0 4px 14px rgba(0,0,0,0.4), 0 0 15px rgba(197,168,128,0.3)",
+                        boxShadow: "0 4px 14px rgba(0,0,0,0.4), 0 0 20px rgba(255,255,255,0.35)",
                         cursor: "pointer",
                         transition: "transform 200ms ease, box-shadow 200ms ease",
                       }}
@@ -494,10 +478,10 @@ export function CoverFlowCarousel({
                 height: "8px",
                 width: idx === currentIndex ? "28px" : "8px",
                 borderRadius: "9999px",
-                backgroundColor: idx === currentIndex ? "#c5a880" : "rgba(255,255,255,0.25)",
+                backgroundColor: idx === currentIndex ? "#ffffff" : "rgba(255,255,255,0.25)",
                 border: "none",
                 cursor: "pointer",
-                boxShadow: idx === currentIndex ? "0 0 10px rgba(197,168,128,0.7)" : "none",
+                boxShadow: idx === currentIndex ? "0 0 10px rgba(255,255,255,0.6)" : "none",
                 transition: "all 300ms ease",
               }}
             />
