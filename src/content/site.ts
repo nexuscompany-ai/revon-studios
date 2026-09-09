@@ -47,8 +47,7 @@ export const nav = [
 
 // Placeholders premium — substituir por fotografias reais da Revom.
 export const images = {
-  heroBg:
-    'https://images.unsplash.com/photo-1614026480217-2bd44ddc4934?q=80&w=2400&auto=format&fit=crop',
+  heroBg: '/images/hero.png',
   finalCtaBg:
     'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2400&auto=format&fit=crop',
   vini:
