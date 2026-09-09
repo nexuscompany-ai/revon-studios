@@ -28,7 +28,7 @@ export function FinalCta() {
             href={whatsapp.finalCta}
             target="_blank"
             rel="noreferrer"
-            className="bg-white text-ink px-9 py-4 text-xs tracking-[0.2em] font-medium uppercase transition-opacity hover:opacity-85"
+            className="rounded-full bg-white text-ink px-9 py-4 text-xs tracking-[0.2em] font-medium uppercase transition-opacity hover:opacity-85"
           >
             Solicitar Avaliação
           </a>
@@ -36,7 +36,7 @@ export function FinalCta() {
             href={whatsapp.finalCta}
             target="_blank"
             rel="noreferrer"
-            className="border border-white/40 text-white px-9 py-4 text-xs tracking-[0.2em] font-medium uppercase transition-colors hover:border-white"
+            className="rounded-full border border-white/40 text-white px-9 py-4 text-xs tracking-[0.2em] font-medium uppercase transition-colors hover:border-white"
           >
             Falar no WhatsApp
           </a>

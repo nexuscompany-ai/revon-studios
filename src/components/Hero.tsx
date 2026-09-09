@@ -25,10 +25,10 @@ export function Hero() {
       >
         <img
           src={images.heroBg}
-          alt="Studio Revom — ambiente premium de detalhamento automotivo"
+          alt="Ambiente do studio Revom — fotografia a ser substituída pela imagem real do espaço"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/45" />
       </div>
 
       <div
@@ -61,13 +61,13 @@ export function Hero() {
             href={whatsapp.hero}
             target="_blank"
             rel="noreferrer"
-            className="border border-white bg-white text-ink px-8 py-4 text-xs tracking-[0.2em] font-medium uppercase transition-colors hover:bg-transparent hover:text-white"
+            className="rounded-full border border-white bg-white text-ink px-8 py-4 text-xs tracking-[0.2em] font-medium uppercase transition-colors hover:bg-transparent hover:text-white"
           >
             Solicitar Avaliação
           </a>
           <a
             href="#servicos"
-            className="border border-white/40 text-white px-8 py-4 text-xs tracking-[0.2em] font-medium uppercase transition-colors hover:border-white"
+            className="rounded-full border border-white/40 text-white px-8 py-4 text-xs tracking-[0.2em] font-medium uppercase transition-colors hover:border-white"
           >
             Conhecer Serviços
           </a>

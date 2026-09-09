@@ -51,7 +51,7 @@ export function Header() {
           href={whatsapp.nav}
           target="_blank"
           rel="noreferrer"
-          className={`hidden md:inline-flex items-center gap-2 border px-6 py-3 text-xs tracking-[0.2em] font-medium uppercase transition-all duration-300 ${
+          className={`hidden md:inline-flex items-center gap-2 rounded-full border px-6 py-3 text-xs tracking-[0.2em] font-medium uppercase transition-all duration-300 ${
             scrolled
               ? 'border-ink text-ink hover:bg-ink hover:text-white'
               : 'border-white text-white hover:bg-white hover:text-ink'
@@ -100,7 +100,7 @@ export function Header() {
             target="_blank"
             rel="noreferrer"
             onClick={() => setOpen(false)}
-            className="mt-6 border border-ink px-8 py-4 text-xs tracking-[0.2em] uppercase"
+            className="mt-6 rounded-full border border-ink px-8 py-4 text-xs tracking-[0.2em] uppercase"
           >
             Solicitar Avaliação
           </a>

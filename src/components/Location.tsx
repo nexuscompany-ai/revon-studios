@@ -28,7 +28,7 @@ export function Location() {
               href={business.mapsUrl}
               target="_blank"
               rel="noreferrer"
-              className="border border-ink px-8 py-4 text-xs tracking-[0.2em] font-medium uppercase transition-colors hover:bg-ink hover:text-white"
+              className="rounded-full border border-ink px-8 py-4 text-xs tracking-[0.2em] font-medium uppercase transition-colors hover:bg-ink hover:text-white"
             >
               Como Chegar
             </a>
@@ -43,11 +43,11 @@ export function Location() {
           </div>
         </div>
 
-        <div className="relative aspect-[4/3] md:aspect-square overflow-hidden bg-ink/5 border border-line">
+        <div className="relative aspect-[4/3] md:aspect-square overflow-hidden rounded-2xl bg-ink/5 border border-line shadow-sm">
           <iframe
             title="Localização Revom Studio Detail"
             src={business.mapsEmbedUrl}
-            className="h-full w-full grayscale contrast-125"
+            className="h-full w-full"
             style={{ border: 0 }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

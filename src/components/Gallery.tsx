@@ -15,10 +15,16 @@ const tiles: Tile[] = [
   { src: images.gallery[5], className: 'md:col-span-6 aspect-[4/5]' },
 ]
 
-function GalleryTile({ tile }: { tile: Tile }) {
-  const ref = useReveal<HTMLDivElement>()
+function GalleryTile({ tile, index }: { tile: Tile; index: number }) {
+  const ref = useReveal<HTMLDivElement>({ threshold: 0.08, rootMargin: '0px 0px -10% 0px' })
+  const delay = (index % 3) * 120
+
   return (
-    <div ref={ref} className={`reveal group relative overflow-hidden bg-ink ${tile.className}`}>
+    <div
+      ref={ref}
+      className={`reveal-gallery group relative overflow-hidden bg-ink ${tile.className}`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
       <img
         src={tile.src}
         alt="Projeto Revom Studio Detail"
@@ -49,7 +55,7 @@ export function Gallery() {
 
       <div className="mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4">
         {tiles.map((tile, i) => (
-          <GalleryTile key={i} tile={tile} />
+          <GalleryTile key={i} tile={tile} index={i} />
         ))}
       </div>
     </section>
