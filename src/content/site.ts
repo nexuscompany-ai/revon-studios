@@ -37,12 +37,15 @@ export const whatsapp = {
   location: waLink('Olá! Gostaria de falar sobre um atendimento na Revom Studio Detail.'),
 }
 
+// Hrefs com "/" na frente para funcionar tanto na home quanto nas páginas de
+// planos (rota separada) — o navegador volta para a home e rola até a âncora.
 export const nav = [
-  { label: 'Início', href: '#hero' },
-  { label: 'Serviços', href: '#servicos' },
-  { label: 'Projetos', href: '#projetos' },
-  { label: 'Sobre', href: '#vini' },
-  { label: 'Contato', href: '#localizacao' },
+  { label: 'Início', href: '/#hero' },
+  { label: 'Serviços', href: '/#servicos' },
+  { label: 'Projetos', href: '/#projetos' },
+  { label: 'Planos', href: '/#planos' },
+  { label: 'Sobre', href: '/#vini' },
+  { label: 'Contato', href: '/#localizacao' },
 ]
 
 // Placeholders premium — substituir por fotografias reais da Revom.
@@ -135,5 +138,91 @@ export const testimonials = [
     name: 'Julia Oliveira',
     avatar: '/images/testimonials/julia-oliveira.png',
     quote: 'Atendimento sensacional, o tratamento no veículo então nem se fale. Obrigada, meninos!',
+  },
+]
+
+// Planos de Tratamento Técnico de Carros — extraídos do catálogo oficial da
+// Revom. A mensagem de WhatsApp de cada plano é sempre só o nome do plano.
+export const plans = [
+  {
+    slug: 'tratamento-basico',
+    name: 'Tratamento Básico',
+    price: 'R$ 95,00',
+    summary: 'Lavagem técnica externa e interna com proteção de cera líquida.',
+    benefits: [
+      'Lavagem técnica detalhada externa',
+      'Limpeza técnica detalhada interna',
+      'Limpeza e condicionamento das caixas de rodas',
+      'Limpeza e selagem de pneus',
+      'Aplicação de Cera Líquida Tok Final — 30 dias de proteção e brilho',
+    ],
+  },
+  {
+    slug: 'tratamento-plus',
+    name: 'Tratamento Plus',
+    price: 'R$ 215,00',
+    summary: 'Tratamento técnico completo, externo e interno, com proteção de até 4 meses.',
+    benefits: [
+      'Lavagem detalhada técnica externa',
+      'Higienização detalhada técnica interna',
+      'Limpeza e condicionamento das caixas de rodas',
+      'Limpeza e selagem de pneus',
+      'Limpeza e revitalização de plásticos externos',
+      'Limpeza de vidros',
+      'Condicionamento dos plásticos internos',
+      'Limpeza técnica de painel, portas e colunas',
+      'Acabamento de canto de portas e borrachas',
+      'Aplicação de cera — duração de até 4 meses de proteção e brilho',
+    ],
+  },
+  {
+    slug: 'tratamento-max',
+    name: 'Tratamento Max',
+    price: 'R$ 375,00',
+    summary: 'O tratamento mais completo da Revom, incluindo motor e proteção prolongada.',
+    benefits: [
+      'Lavagem técnica detalhada externa',
+      'Higienização técnica detalhada interna',
+      'Limpeza e condicionamento das caixas de rodas',
+      'Limpeza e selagem de pneus',
+      'Limpeza e revitalização de plásticos externos',
+      'Condicionamento dos plásticos internos',
+      'Limpeza de vidros',
+      'Limpeza técnica de teto, painel e portas',
+      'Higienização de cinto de segurança',
+      'Lavagem técnica de motor',
+      'Proteção especial de motor — revestimento à base d’água',
+      'Higienização de canto de portas e borrachas',
+      'Aplicação de cera — duração de até 4 meses de proteção e brilho',
+    ],
+  },
+]
+
+// Perguntas frequentes — conteúdo provisório/fictício, ajustar depois com
+// respostas reais da Revom.
+export const faqs = [
+  {
+    question: 'Preciso agendar com antecedência?',
+    answer:
+      'Sim. Recomendamos agendar pelo WhatsApp com pelo menos 1 dia de antecedência para garantir seu horário no studio.',
+  },
+  {
+    question: 'Quanto tempo dura cada tratamento?',
+    answer:
+      'Varia conforme o plano e o estado do veículo — do Tratamento Básico ao Max, o tempo médio fica entre 1h30 e 4h. Informamos uma previsão no agendamento.',
+  },
+  {
+    question: 'Vocês buscam e entregam o veículo?',
+    answer:
+      'Consulte disponibilidade de busca e entrega na sua região diretamente pelo WhatsApp — depende da localização e da agenda do dia.',
+  },
+  {
+    question: 'Quais formas de pagamento são aceitas?',
+    answer: 'Aceitamos Pix, cartão de crédito/débito e dinheiro.',
+  },
+  {
+    question: 'A proteção aplicada tem garantia?',
+    answer:
+      'Sim, cada proteção (cera, coating ou PPF) tem uma durabilidade estimada informada no próprio plano. Cuidados de manutenção são passados na entrega do veículo.',
   },
 ]

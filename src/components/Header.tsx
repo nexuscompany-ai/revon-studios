@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Logo } from './Logo'
 import { nav, whatsapp } from '../content/site'
 
@@ -29,21 +30,21 @@ export function Header() {
       }`}
     >
       <div className="relative z-20 mx-auto max-w-[1440px] px-6 md:px-10 flex items-center justify-between">
-        <a href="#hero" onClick={() => setOpen(false)}>
+        <Link to="/#hero" onClick={() => setOpen(false)}>
           <Logo light={!scrolled && !open} />
-        </a>
+        </Link>
 
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-8">
           {nav.map((item) => (
-            <a
+            <Link
               key={item.href}
-              href={item.href}
+              to={item.href}
               className={`text-xs tracking-[0.2em] font-medium uppercase transition-colors hover:opacity-60 ${
                 scrolled ? 'text-ink' : 'text-white'
               }`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -86,14 +87,14 @@ export function Header() {
       >
         <div className="h-full flex flex-col items-center justify-center gap-8">
           {nav.map((item) => (
-            <a
+            <Link
               key={item.href}
-              href={item.href}
+              to={item.href}
               onClick={() => setOpen(false)}
               className="text-2xl font-display tracking-widest text-ink"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
           <a
             href={whatsapp.nav}

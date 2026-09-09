@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Logo } from './Logo'
 import { business, nav } from '../content/site'
 
@@ -14,9 +15,9 @@ export function Footer() {
           <ul className="space-y-2">
             {nav.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className="text-sm text-ink/70 hover:text-ink transition-colors">
+                <Link to={item.href} className="text-sm text-ink/70 hover:text-ink transition-colors">
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
