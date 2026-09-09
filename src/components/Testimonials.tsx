@@ -1,31 +1,36 @@
-import { useEffect, useState } from 'react'
 import { business, testimonials } from '../content/site'
 import { useReveal } from '../hooks/useReveal'
 
-const AUTOPLAY_MS = 4500
-
-function Stars({ count = 5 }: { count?: number }) {
+function Stars() {
   return (
-    <span className="text-star text-lg tracking-[0.15em]" aria-hidden>
-      {'★'.repeat(count)}
+    <span className="text-star text-sm tracking-[0.15em]" aria-hidden>
+      {'★★★★★'}
     </span>
   )
 }
 
+/** Generic silhouette avatar — testimonials are real Google reviews, but no reviewer photos
+ * were provided, so we use a neutral placeholder icon instead of a fabricated face. */
+function Avatar() {
+  return (
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink text-paper">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <circle cx="12" cy="8" r="4" fill="currentColor" />
+        <path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7" fill="currentColor" />
+      </svg>
+    </span>
+  )
+}
+
+// Repeated so the marquee track can loop seamlessly (shifts by exactly 1/3 of its width).
+const track = [...testimonials, ...testimonials, ...testimonials]
+
 export function Testimonials() {
   const ref = useReveal<HTMLDivElement>()
-  const [active, setActive] = useState(0)
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setActive((i) => (i + 1) % testimonials.length)
-    }, AUTOPLAY_MS)
-    return () => clearInterval(id)
-  }, [])
 
   return (
-    <section className="bg-bone py-24 md:py-36 px-6">
-      <div ref={ref} className="reveal mx-auto max-w-3xl text-center">
+    <section className="bg-bone py-24 md:py-32 overflow-hidden">
+      <div ref={ref} className="reveal mx-auto max-w-3xl text-center px-6">
         <h2 className="font-display text-3xl md:text-5xl leading-tight">QUEM CONFIA, RECOMENDA.</h2>
 
         <div className="mt-6 flex items-center justify-center gap-3">
@@ -35,45 +40,38 @@ export function Testimonials() {
             {business.googleReviewCount} avaliações no Google
           </span>
         </div>
+      </div>
 
-        <div className="relative mt-10 md:mt-16 h-40 sm:h-32 md:h-28 overflow-hidden">
-          {testimonials.map((t, i) => (
-            <blockquote
+      <div className="group relative mt-12 md:mt-16 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+        <div className="flex w-max animate-marquee gap-4 px-4 group-hover:[animation-play-state:paused]">
+          {track.map((t, i) => (
+            <div
               key={i}
-              className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-4 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-              style={{
-                opacity: i === active ? 1 : 0,
-                transform: i === active ? 'translateX(0)' : i < active ? 'translateX(-24px)' : 'translateX(24px)',
-                pointerEvents: i === active ? 'auto' : 'none',
-              }}
-              aria-hidden={i !== active}
+              className="flex w-72 sm:w-80 shrink-0 flex-col gap-3 rounded-2xl border border-ink/10 bg-paper px-6 py-5 text-left"
             >
-              <Stars />
-              <p className="text-graphite text-sm md:text-lg font-light leading-relaxed max-w-md">
+              <div className="flex items-center gap-3">
+                <Avatar />
+                <div>
+                  <Stars />
+                  <p className="text-[11px] tracking-[0.15em] text-graphite uppercase mt-0.5">
+                    Cliente Revom
+                  </p>
+                </div>
+              </div>
+              <p className="text-graphite text-sm font-light leading-relaxed line-clamp-3">
                 "{t.quote}"
               </p>
-            </blockquote>
+            </div>
           ))}
         </div>
+      </div>
 
-        <div className="mt-6 flex items-center justify-center gap-2">
-          {testimonials.map((_, i) => (
-            <button
-              key={i}
-              aria-label={`Ver avaliação ${i + 1}`}
-              onClick={() => setActive(i)}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === active ? 'w-6 bg-ink' : 'w-1.5 bg-ink/20'
-              }`}
-            />
-          ))}
-        </div>
-
+      <div className="mt-10 text-center">
         <a
           href={business.googleReviewsUrl}
           target="_blank"
           rel="noreferrer"
-          className="mt-10 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase border-b border-ink pb-1 hover:opacity-60 transition-opacity"
+          className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase border-b border-ink pb-1 hover:opacity-60 transition-opacity"
         >
           Ver avaliações no Google →
         </a>
