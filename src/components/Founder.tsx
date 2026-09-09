@@ -5,11 +5,25 @@ import { SealIcon } from './SealIcon'
 export function Founder() {
   const imgRef = useReveal<HTMLDivElement>()
   const textRef = useReveal<HTMLDivElement>()
+  const certsRef = useReveal<HTMLDivElement>()
 
   return (
     <section id="vini" className="bg-ink text-white py-28 md:py-36 overflow-hidden">
-      <div className="mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
-        <div ref={imgRef} className="reveal relative order-1 aspect-[4/5] overflow-hidden bg-ink">
+      <div className="mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 md:items-center">
+        {/* No mobile: nome primeiro, depois a foto, depois os certificados
+            "saindo" de trás dela. No desktop: foto à esquerda ocupando as
+            duas linhas, nome e certificados empilhados à direita. */}
+        <div ref={textRef} className="reveal order-1 md:order-none md:col-start-2">
+          <p className="text-xs tracking-[0.4em] text-white/50 mb-4">POR TRÁS DA REVOM</p>
+          <h2 className="font-display text-4xl md:text-6xl leading-none uppercase">{founder.name}</h2>
+          <p className="mt-3 text-white/60 text-sm md:text-base font-light">{founder.role}</p>
+          <div className="mt-10 h-px w-16 bg-white/20" />
+        </div>
+
+        <div
+          ref={imgRef}
+          className="reveal relative order-2 md:order-none md:col-start-1 md:row-span-2 aspect-[4/5] overflow-hidden bg-ink"
+        >
           <img
             src={images.vini}
             alt={founder.name}
@@ -17,15 +31,9 @@ export function Founder() {
           />
         </div>
 
-        <div ref={textRef} className="reveal order-2">
-          <p className="text-xs tracking-[0.4em] text-white/50 mb-4">POR TRÁS DA REVOM</p>
-          <h2 className="font-display text-4xl md:text-6xl leading-none uppercase">{founder.name}</h2>
-          <p className="mt-3 text-white/60 text-sm md:text-base font-light">{founder.role}</p>
-
-          <div className="mt-10 h-px w-16 bg-white/20" />
-
+        <div ref={certsRef} className="reveal order-3 md:order-none md:col-start-2">
           <p
-            className="mt-10 text-3xl md:text-4xl text-white/90 italic"
+            className="mt-10 md:mt-0 text-3xl md:text-4xl text-white/90 italic"
             style={{ fontFamily: 'var(--font-accent)' }}
           >
             Certificados
