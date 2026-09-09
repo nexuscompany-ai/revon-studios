@@ -47,12 +47,14 @@ export const nav = [
 
 // Placeholders premium — substituir por fotografias reais da Revom.
 export const images = {
-  heroBg: '/images/hero.png',
-  finalCtaBg:
-    'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2400&auto=format&fit=crop',
+  heroVideo: '/videos/hero.mp4',
+  // Usado como poster do vídeo da Hero (primeiro frame antes de carregar) e
+  // como fundo do CTA final.
+  heroPoster: '/images/hero.png',
+  finalCtaBg: '/images/hero.png',
   vini: '/images/vini.png',
   services: {
-    ppf: '/images/services/ppf.jpeg',
+    ppf: '/images/services/ppf.png',
     ceramic: '/images/services/ceramica.jpeg',
     detailing: '/images/services/detalhamento.jpeg',
     paintCorrection: '/images/services/correcao-pintura.jpeg',
