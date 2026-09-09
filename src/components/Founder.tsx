@@ -10,8 +10,8 @@ export function Founder() {
   return (
     <section id="vini" className="bg-ink text-white py-28 md:py-36 overflow-hidden">
       <div className="mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 md:items-center">
-        {/* No mobile: nome primeiro, depois a foto, depois os certificados
-            "saindo" de trás dela. No desktop: foto à esquerda ocupando as
+        {/* No mobile: nome primeiro, depois os certificados, depois a foto
+            do Vini por último. No desktop: foto à esquerda ocupando as
             duas linhas, nome e certificados empilhados à direita. */}
         <div ref={textRef} className="reveal order-1 md:order-none md:col-start-2">
           <p className="text-xs tracking-[0.4em] text-white/50 mb-4">POR TRÁS DA REVOM</p>
@@ -22,7 +22,7 @@ export function Founder() {
 
         <div
           ref={imgRef}
-          className="reveal relative order-2 md:order-none md:col-start-1 md:row-span-2 aspect-[4/5] overflow-hidden bg-ink"
+          className="reveal relative order-3 md:order-none md:col-start-1 md:row-span-2 aspect-[4/5] overflow-hidden bg-ink mt-10 md:mt-0"
         >
           <img
             src={images.vini}
@@ -31,9 +31,9 @@ export function Founder() {
           />
         </div>
 
-        <div ref={certsRef} className="reveal order-3 md:order-none md:col-start-2">
+        <div ref={certsRef} className="reveal order-2 md:order-none md:col-start-2">
           <p
-            className="mt-10 md:mt-0 text-3xl md:text-4xl text-white/90 italic"
+            className="mt-6 md:mt-0 text-3xl md:text-4xl text-white/90 italic"
             style={{ fontFamily: 'var(--font-accent)' }}
           >
             Certificados

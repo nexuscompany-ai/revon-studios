@@ -4,7 +4,7 @@ import { business, nav } from '../content/site'
 
 export function Footer() {
   return (
-    <footer className="bg-paper border-t border-line py-16 px-6 md:px-10">
+    <footer className="bg-paper py-16 px-6 md:px-10">
       <div className="mx-auto max-w-[1440px] grid grid-cols-1 md:grid-cols-4 gap-12">
         <div>
           <Logo />

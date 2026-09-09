@@ -34,7 +34,7 @@ function Home() {
       <Faq />
       <SectionSeam direction="to-dark" variant="moon" />
       <FinalCta />
-      <SectionSeam direction="to-light" variant="diagonal" />
+      <SectionSeam direction="to-light" variant="moon" flip />
     </>
   )
 }
