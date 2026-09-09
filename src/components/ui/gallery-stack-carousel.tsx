@@ -26,7 +26,11 @@ const GalleryStackCarousel = React.forwardRef<
 >(({ className, images, autoplayDelay = 3200, showDots = true, ...props }, ref) => {
   const [currentIndex, setCurrentIndex] = React.useState(0)
   const [exitX, setExitX] = React.useState(0)
-  const [isDragging, setIsDragging] = React.useState(false)
+
+  // A ref (not state) tracks the drag gate so a stray touch that starts a
+  // drag but never cleanly ends it (e.g. the page scroll takes over on
+  // mobile) can't leave autoplay permanently paused.
+  const isDraggingRef = React.useRef(false)
 
   const advance = React.useCallback((direction: number) => {
     setExitX(direction)
@@ -36,23 +40,41 @@ const GalleryStackCarousel = React.forwardRef<
     }, 200)
   }, [images.length])
 
-  const handleDragStart = () => setIsDragging(true)
+  const handleDragStart = () => {
+    isDraggingRef.current = true
+  }
 
   const handleDragEnd = (
     _event: MouseEvent | TouchEvent | PointerEvent,
     info: PanInfo,
   ) => {
-    setIsDragging(false)
+    isDraggingRef.current = false
     if (Math.abs(info.offset.x) > 100) {
       advance(info.offset.x)
     }
   }
 
+  // Safety net: any pointer released or cancelled anywhere clears the drag
+  // gate, so autoplay can never get stuck off after an interrupted gesture.
   React.useEffect(() => {
-    if (isDragging || images.length <= 1) return
-    const timer = setTimeout(() => advance(-120), autoplayDelay)
+    const release = () => {
+      isDraggingRef.current = false
+    }
+    window.addEventListener("pointerup", release)
+    window.addEventListener("pointercancel", release)
+    return () => {
+      window.removeEventListener("pointerup", release)
+      window.removeEventListener("pointercancel", release)
+    }
+  }, [])
+
+  React.useEffect(() => {
+    if (images.length <= 1) return
+    const timer = setTimeout(() => {
+      if (!isDraggingRef.current) advance(-120)
+    }, autoplayDelay)
     return () => clearTimeout(timer)
-  }, [currentIndex, isDragging, autoplayDelay, advance, images.length])
+  }, [currentIndex, autoplayDelay, advance, images.length])
 
   return (
     <div

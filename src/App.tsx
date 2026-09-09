@@ -18,8 +18,8 @@ export default function App() {
       <main>
         <Hero />
         <SectionFade direction="to-light" />
-        <Manifesto />
         <Services />
+        <Manifesto />
         <Gallery />
         <SectionFade direction="to-dark" />
         <Founder />
