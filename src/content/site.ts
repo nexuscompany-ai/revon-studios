@@ -25,7 +25,7 @@ export const business = {
   mapsEmbedUrl: 'https://www.google.com/maps?q=R.+Edmundo+Pagiossi+Filho,+25,+Jardim+Rosemary,+Itapevi+-+SP,+06657-200&output=embed',
 }
 
-function waLink(message: string) {
+export function waLink(message: string) {
   return `https://wa.me/${business.phoneWhatsapp}?text=${encodeURIComponent(message)}`
 }
 
