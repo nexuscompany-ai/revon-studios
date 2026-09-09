@@ -24,18 +24,11 @@ export function Hero() {
           transition: 'transform 0.1s linear',
         }}
       >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster={images.heroPoster}
-          aria-label="Ambiente do studio Revom"
+        <img
+          src={images.heroPoster}
+          alt="Ambiente do studio Revom"
           className="h-full w-full object-cover"
-        >
-          <source src={images.heroVideo} type="video/mp4" />
-        </video>
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/8 to-black/25 md:from-black/60 md:via-black/15 md:to-black/35" />
       </div>
 

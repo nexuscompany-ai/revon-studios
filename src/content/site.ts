@@ -47,9 +47,7 @@ export const nav = [
 
 // Placeholders premium — substituir por fotografias reais da Revom.
 export const images = {
-  heroVideo: '/videos/hero.mp4',
-  // Usado como poster do vídeo da Hero (primeiro frame antes de carregar) e
-  // como fundo do CTA final.
+  // Fundo da Hero, reaproveitado também como fundo do CTA final.
   heroPoster: '/images/hero.png',
   finalCtaBg: '/images/hero.png',
   vini: '/images/vini.png',

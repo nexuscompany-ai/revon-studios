@@ -10,9 +10,9 @@ export function FinalCta() {
       <img
         src={images.finalCtaBg}
         alt="Detalhe automotivo Revom Studio Detail"
-        className="absolute inset-0 h-full w-full object-cover opacity-45 md:opacity-35"
+        className="absolute inset-0 h-full w-full object-cover opacity-70 md:opacity-60"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/40 md:from-black/80 md:via-black/35 md:to-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-black/30 md:from-black/65 md:via-black/20 md:to-black/35" />
 
       <div ref={ref} className="reveal relative z-10 mx-auto max-w-2xl text-center text-white">
         <h2 className="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05]">
