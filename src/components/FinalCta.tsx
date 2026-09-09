@@ -24,11 +24,8 @@ export function FinalCta() {
           Solicite uma avaliação e descubra a solução ideal para o seu veículo.
         </p>
 
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="mt-12 flex items-center justify-center">
           <WhatsAppButton href={whatsapp.finalCta}>Solicitar Avaliação</WhatsAppButton>
-          <WhatsAppButton href={whatsapp.finalCta} variant="outline">
-            Falar no WhatsApp
-          </WhatsAppButton>
         </div>
       </div>
     </section>

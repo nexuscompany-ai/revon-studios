@@ -28,7 +28,7 @@ export function Header() {
           : 'bg-transparent py-6'
       }`}
     >
-      <div className="mx-auto max-w-[1440px] px-6 md:px-10 flex items-center justify-between">
+      <div className="relative z-20 mx-auto max-w-[1440px] px-6 md:px-10 flex items-center justify-between">
         <a href="#hero" onClick={() => setOpen(false)}>
           <Logo light={!scrolled && !open} />
         </a>
@@ -63,7 +63,7 @@ export function Header() {
         <button
           aria-label="Abrir menu"
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden relative z-50 h-8 w-8 flex flex-col items-center justify-center gap-[6px]"
+          className="md:hidden relative h-8 w-8 flex flex-col items-center justify-center gap-[6px]"
         >
           <span
             className={`block h-px w-6 transition-all duration-300 ${
@@ -80,7 +80,7 @@ export function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden fixed inset-0 top-0 bg-paper transition-opacity duration-300 ${
+        className={`md:hidden fixed inset-0 top-0 z-10 bg-paper transition-opacity duration-300 ${
           open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >

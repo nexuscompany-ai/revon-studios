@@ -15,7 +15,7 @@ export function SectionFade({ direction }: SectionFadeProps) {
   return (
     <div
       aria-hidden
-      className="h-24 sm:h-32 md:h-56 w-full"
+      className="h-10 sm:h-14 md:h-20 w-full"
       style={{ background: `linear-gradient(to bottom, ${start}, ${end})` }}
     />
   )
