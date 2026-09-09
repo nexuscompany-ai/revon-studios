@@ -52,18 +52,17 @@ export const images = {
     'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2400&auto=format&fit=crop',
   vini: '/images/vini.png',
   services: {
-    ppf: 'https://images.unsplash.com/photo-1600661653561-629509216228?q=80&w=1800&auto=format&fit=crop',
-    ceramic: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1800&auto=format&fit=crop',
-    detailing: 'https://images.unsplash.com/photo-1635784063388-1ff609e4243b?q=80&w=1800&auto=format&fit=crop',
-    paintCorrection: 'https://images.unsplash.com/photo-1605559911160-a3d95d213904?q=80&w=1800&auto=format&fit=crop',
+    ppf: '/images/services/ppf.jpeg',
+    ceramic: '/images/services/ceramica.jpeg',
+    detailing: '/images/services/detalhamento.jpeg',
+    paintCorrection: '/images/services/correcao-pintura.jpeg',
   },
+  // Trabalhos reais da Revom.
   gallery: [
-    'https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=1600&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=1200&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=1200&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1519245659620-e859806a8d3b?q=80&w=2000&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1550355191-aa8a80b41353?q=80&w=1400&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=1400&auto=format&fit=crop',
+    '/images/gallery/ranger-traseira.jpeg',
+    '/images/gallery/audi-frente.jpeg',
+    '/images/gallery/fiat-interior.jpeg',
+    '/images/gallery/nissan-interior.jpeg',
   ],
   instagram: [
     'https://images.unsplash.com/photo-1567818735868-e71b99932e29?q=80&w=1200&auto=format&fit=crop',
@@ -89,7 +88,7 @@ export const services = [
   },
   {
     number: '03',
-    name: 'DETAILING',
+    name: 'DETALHAMENTO',
     description: 'Detalhamento técnico em cada superfície e acabamento.',
     image: images.services.detailing,
   },
