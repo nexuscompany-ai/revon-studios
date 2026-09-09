@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@1,500&family=Inter:wght@300;400;500;600&display=swap');
 @import 'tailwindcss';
 
 @theme {
   --font-display: 'Bebas Neue', 'Arial Narrow', sans-serif;
   --font-sans: 'Inter', system-ui, sans-serif;
+  --font-accent: 'Cormorant Garamond', 'Times New Roman', serif;
 
   --color-ink: #0a0a0a;
   --color-ink-soft: #141414;
@@ -104,37 +105,44 @@ body {
   scale: 1 1;
 }
 
-/* Certification badges (Founder section): float in from behind/beside Vini's
-   photo with a slight spring overshoot, staggered per card. */
+/* Certification badges (Founder section): the outer .cert-badge handles the
+   one-time entrance (rises into place with a slight spring overshoot,
+   staggered per card); the inner .cert-badge__float handles a separate,
+   continuous idle bob once landed — kept on a different element so the two
+   transform animations don't fight over the same CSS property. */
 .cert-badge {
   opacity: 0;
-  transform: translateY(28px) scale(0.9);
-  transition: opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: translateY(46px) scale(0.9);
+  transition: opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .reveal.is-visible .cert-badge {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
 .cert-badge:nth-child(1) {
-  transition-delay: 0.5s;
+  transition-delay: 0.45s;
 }
 .cert-badge:nth-child(2) {
-  transition-delay: 0.68s;
+  transition-delay: 0.6s;
 }
 .cert-badge:nth-child(3) {
-  transition-delay: 0.86s;
+  transition-delay: 0.75s;
 }
 .cert-badge:nth-child(4) {
-  transition-delay: 1.04s;
+  transition-delay: 0.9s;
 }
 
-@media (min-width: 768px) {
-  .cert-badge {
-    transform: translateX(24px) scale(0.9);
+@keyframes floatIdle {
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  .reveal.is-visible .cert-badge {
-    transform: translateX(0) scale(1);
+  50% {
+    transform: translateY(-7px);
   }
+}
+.cert-badge__float {
+  animation: floatIdle 4.6s ease-in-out infinite;
 }
 
 /* Periodic diagonal shine sweep across each certification card. */

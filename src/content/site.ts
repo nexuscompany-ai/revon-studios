@@ -103,6 +103,11 @@ export const services = [
   },
 ]
 
+export const founder = {
+  name: 'Vinícius Loyola',
+  role: 'Fundador & especialista em detalhamento automotivo',
+}
+
 export const certifications = [
   { number: '01', name: 'CERTIFICAÇÃO 01', area: 'Detalhamento Automotivo' },
   { number: '02', name: 'CERTIFICAÇÃO 02', area: 'Proteção de Pintura' },
