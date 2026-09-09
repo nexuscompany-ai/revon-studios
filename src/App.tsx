@@ -9,6 +9,7 @@ import { InstagramFeed } from './components/InstagramFeed'
 import { Location } from './components/Location'
 import { FinalCta } from './components/FinalCta'
 import { Footer } from './components/Footer'
+import { SectionFade } from './components/SectionFade'
 
 export default function App() {
   return (
@@ -16,14 +17,19 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <SectionFade direction="to-light" />
         <Manifesto />
         <Services />
         <Gallery />
+        <SectionFade direction="to-dark" />
         <Founder />
+        <SectionFade direction="to-light" />
         <Testimonials />
         <InstagramFeed />
         <Location />
+        <SectionFade direction="to-dark" />
         <FinalCta />
+        <SectionFade direction="to-light" />
       </main>
       <Footer />
     </div>

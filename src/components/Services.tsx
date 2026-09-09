@@ -28,7 +28,7 @@ export function Services() {
   }
 
   return (
-    <section id="servicos" className="bg-bone">
+    <section id="servicos" className="bg-paper">
       <div ref={headingRef} className="reveal mx-auto max-w-[1440px] px-6 md:px-10 pt-28 md:pt-36 pb-14 md:pb-16">
         <p className="text-xs tracking-[0.4em] text-graphite mb-4">SERVIÇOS</p>
         <h2 className="font-display text-4xl md:text-6xl leading-none">NOSSAS SOLUÇÕES</h2>

@@ -29,7 +29,7 @@ export function Testimonials() {
   const ref = useReveal<HTMLDivElement>()
 
   return (
-    <section className="bg-bone py-24 md:py-32 overflow-hidden">
+    <section className="bg-paper py-24 md:py-32 overflow-hidden">
       <div ref={ref} className="reveal mx-auto max-w-3xl text-center px-6">
         <h2 className="font-display text-3xl md:text-5xl leading-tight">QUEM CONFIA, RECOMENDA.</h2>
 

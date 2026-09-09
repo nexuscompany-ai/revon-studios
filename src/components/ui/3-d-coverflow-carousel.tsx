@@ -146,8 +146,8 @@ export function CoverFlowCarousel({
     <section
       className={`relative w-full min-h-[760px] flex items-center justify-center overflow-hidden py-12 select-none ${className}`}
       style={{
-        backgroundColor: "#0c0a09",
-        color: "#ffffff",
+        backgroundColor: "#ffffff",
+        color: "#0c0a09",
         fontFamily: "system-ui, -apple-system, sans-serif",
       }}
       onMouseEnter={() => setIsHovered(true)}
@@ -155,46 +155,24 @@ export function CoverFlowCarousel({
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Background Ambience */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <img
-          src={items[currentIndex]?.img}
-          alt="ambience background"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            filter: "brightness(0.22) blur(32px)",
-            transform: "scale(1.15)",
-            transition: "opacity 1000ms ease, filter 1000ms ease",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background: "radial-gradient(circle at center, rgba(12,10,9,0.3) 0%, rgba(12,10,9,0.92) 100%)",
-          }}
-        />
-      </div>
-
       <div className="relative w-full max-w-6xl mx-auto px-4 z-10 flex flex-col items-center">
         {/* Eyebrow */}
         {sectionLabel && (
           <div className="flex items-center gap-3 mb-8">
-            <span style={{ width: "36px", height: "1px", background: "linear-gradient(90deg, transparent, #ffffff)" }} />
+            <span style={{ width: "36px", height: "1px", background: "linear-gradient(90deg, transparent, #0c0a09)" }} />
             <h3
               style={{
                 fontSize: "0.75rem",
                 fontWeight: 700,
                 letterSpacing: "0.3em",
                 textTransform: "uppercase",
-                color: "#ffffff",
+                color: "#0c0a09",
                 margin: 0,
               }}
             >
               {sectionLabel}
             </h3>
-            <span style={{ width: "36px", height: "1px", background: "linear-gradient(90deg, #ffffff, transparent)" }} />
+            <span style={{ width: "36px", height: "1px", background: "linear-gradient(90deg, #0c0a09, transparent)" }} />
           </div>
         )}
 

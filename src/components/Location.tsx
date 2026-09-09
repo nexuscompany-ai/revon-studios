@@ -5,7 +5,7 @@ export function Location() {
   const ref = useReveal<HTMLDivElement>()
 
   return (
-    <section id="localizacao" className="bg-bone py-28 md:py-36">
+    <section id="localizacao" className="bg-paper py-28 md:py-36">
       <div ref={ref} className="reveal mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <p className="text-xs tracking-[0.4em] text-graphite mb-4">LOCALIZAÇÃO</p>
