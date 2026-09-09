@@ -13,28 +13,28 @@ import { Location } from './components/Location'
 import { Faq } from './components/Faq'
 import { FinalCta } from './components/FinalCta'
 import { Footer } from './components/Footer'
-import { SectionFade } from './components/SectionFade'
+import { SectionSeam } from './components/SectionSeam'
 import { PlanDetail } from './pages/PlanDetail'
 
 function Home() {
   return (
     <>
       <Hero />
-      <SectionFade direction="to-light" />
+      <SectionSeam direction="to-light" variant="diagonal" />
       <Services />
       <Manifesto />
       <Gallery />
       <Plans />
-      <SectionFade direction="to-dark" />
+      <SectionSeam direction="to-dark" variant="moon" />
       <Founder />
-      <SectionFade direction="to-light" />
+      <SectionSeam direction="to-light" variant="diagonal" />
       <Testimonials />
       <InstagramFeed />
       <Location />
       <Faq />
-      <SectionFade direction="to-dark" />
+      <SectionSeam direction="to-dark" variant="moon" />
       <FinalCta />
-      <SectionFade direction="to-light" />
+      <SectionSeam direction="to-light" variant="diagonal" />
     </>
   )
 }
