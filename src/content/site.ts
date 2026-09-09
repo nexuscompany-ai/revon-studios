@@ -108,8 +108,33 @@ export const certifications = [
   { number: '04', name: 'CERTIFICAÇÃO 04', area: 'Revestimento Cerâmico' },
 ]
 
+// Avaliações reais de clientes — 5 estrelas. Nome e foto de cada um em
+// public/images/testimonials/.
 export const testimonials = [
-  { quote: 'Ótimo trabalho, bem executado, e muito zeloso com meu carro.' },
-  { quote: 'Atendimento sensacional, o tratamento no veículo então nem se fale.' },
-  { quote: 'O atendimento e recepção da equipe fizeram toda diferença.' },
+  {
+    name: 'Bruno Simões',
+    avatar: '/images/testimonials/bruno-simoes.png',
+    quote:
+      'Super recomendamos os serviços da Revom! Fizemos o Tratamento Max, nosso carro ficou perfeito, o nível de detalhamento é excelente. O atendimento e recepção do Vini e da equipe fizeram toda diferença. Faça o seu agendamento.',
+  },
+  {
+    name: 'Matheus',
+    avatar: '/images/testimonials/matheus.png',
+    quote: 'Ótimo trabalho, bem executado, e muito zeloso com meu carro. Super recomendo!',
+  },
+  {
+    name: 'Artur Boccia',
+    avatar: '/images/testimonials/artur-boccia.png',
+    quote: 'O trabalho foi feito muito bem, dentro das minhas expectativas. Eu recomendo.',
+  },
+  {
+    name: 'Felipe Almeida',
+    avatar: '/images/testimonials/felipe-almeida.png',
+    quote: 'Muito atencioso e cuidadoso. Excelente trabalho!',
+  },
+  {
+    name: 'Julia Oliveira',
+    avatar: '/images/testimonials/julia-oliveira.png',
+    quote: 'Atendimento sensacional, o tratamento no veículo então nem se fale. Obrigada, meninos!',
+  },
 ]

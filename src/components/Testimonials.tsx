@@ -9,19 +9,6 @@ function Stars() {
   )
 }
 
-/** Generic silhouette avatar — testimonials are real Google reviews, but no reviewer photos
- * were provided, so we use a neutral placeholder icon instead of a fabricated face. */
-function Avatar() {
-  return (
-    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink text-paper">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
-        <circle cx="12" cy="8" r="4" fill="currentColor" />
-        <path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7" fill="currentColor" />
-      </svg>
-    </span>
-  )
-}
-
 // Repeated so the marquee track can loop seamlessly (shifts by exactly 1/3 of its width).
 const track = [...testimonials, ...testimonials, ...testimonials]
 
@@ -50,11 +37,15 @@ export function Testimonials() {
               className="flex w-72 sm:w-80 shrink-0 flex-col gap-3 rounded-2xl border border-ink/10 bg-paper px-6 py-5 text-left"
             >
               <div className="flex items-center gap-3">
-                <Avatar />
+                <img
+                  src={t.avatar}
+                  alt={t.name}
+                  className="h-10 w-10 shrink-0 rounded-full object-cover"
+                />
                 <div>
                   <Stars />
                   <p className="text-[11px] tracking-[0.15em] text-graphite uppercase mt-0.5">
-                    Cliente Revom
+                    {t.name}
                   </p>
                 </div>
               </div>
