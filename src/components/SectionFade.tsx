@@ -3,15 +3,23 @@ type SectionFadeProps = {
   direction: 'to-dark' | 'to-light'
 }
 
-/** Thin gradient seam placed between a black and a white section so the color
- * change reads as a soft blend instead of a hard line. */
+const WHITE = '#ffffff'
+const BLACK = '#0a0a0a'
+
+/** Gradient seam placed between a black and a white section so the color
+ * change reads as a slow, soft blend instead of a hard line. Uses extra
+ * stops (not just from/to) so the transition eases in and out instead of
+ * ramping linearly. */
 export function SectionFade({ direction }: SectionFadeProps) {
+  const [start, end] = direction === 'to-dark' ? [WHITE, BLACK] : [BLACK, WHITE]
+
   return (
     <div
       aria-hidden
-      className={`h-16 md:h-24 w-full ${
-        direction === 'to-dark' ? 'bg-gradient-to-b from-paper to-ink' : 'bg-gradient-to-b from-ink to-paper'
-      }`}
+      className="h-24 md:h-40 w-full"
+      style={{
+        background: `linear-gradient(to bottom, ${start} 0%, ${start} 15%, ${end} 85%, ${end} 100%)`,
+      }}
     />
   )
 }

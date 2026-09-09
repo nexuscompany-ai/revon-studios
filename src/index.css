@@ -62,24 +62,6 @@ body {
   animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-@keyframes scrollDot {
-  0% {
-    transform: translateY(-6px);
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(18px);
-    opacity: 0;
-  }
-}
-
-.animate-scroll-dot {
-  animation: scrollDot 1.8s ease-in-out infinite;
-}
-
 @keyframes marquee {
   from {
     transform: translateX(0);

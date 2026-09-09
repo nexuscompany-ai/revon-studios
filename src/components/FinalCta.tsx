@@ -1,5 +1,6 @@
 import { images, whatsapp } from '../content/site'
 import { useReveal } from '../hooks/useReveal'
+import { WhatsAppButton } from './WhatsAppButton'
 
 export function FinalCta() {
   const ref = useReveal<HTMLDivElement>()
@@ -24,22 +25,10 @@ export function FinalCta() {
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href={whatsapp.finalCta}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full bg-white text-ink px-9 py-4 text-xs tracking-[0.2em] font-medium uppercase transition-opacity hover:opacity-85"
-          >
-            Solicitar Avaliação
-          </a>
-          <a
-            href={whatsapp.finalCta}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full border border-white/40 text-white px-9 py-4 text-xs tracking-[0.2em] font-medium uppercase transition-colors hover:border-white"
-          >
+          <WhatsAppButton href={whatsapp.finalCta}>Solicitar Avaliação</WhatsAppButton>
+          <WhatsAppButton href={whatsapp.finalCta} variant="outline">
             Falar no WhatsApp
-          </a>
+          </WhatsAppButton>
         </div>
       </div>
     </section>

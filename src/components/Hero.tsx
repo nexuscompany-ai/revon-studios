@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { images, whatsapp, business } from '../content/site'
+import { WhatsAppButton } from './WhatsAppButton'
 
 export function Hero() {
   const [scrollY, setScrollY] = useState(0)
@@ -28,7 +29,7 @@ export function Hero() {
           alt="Ambiente do studio Revom — fotografia a ser substituída pela imagem real do espaço"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/8 to-black/25 md:from-black/60 md:via-black/15 md:to-black/35" />
       </div>
 
       <div
@@ -57,14 +58,7 @@ export function Hero() {
         </p>
 
         <div className="animate-fade-up mt-10 flex flex-col sm:flex-row items-center gap-4" style={{ animationDelay: '0.8s' }}>
-          <a
-            href={whatsapp.hero}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full border border-white bg-white text-ink px-8 py-4 text-xs tracking-[0.2em] font-medium uppercase transition-colors hover:bg-transparent hover:text-white"
-          >
-            Solicitar Avaliação
-          </a>
+          <WhatsAppButton href={whatsapp.hero}>Solicitar Avaliação</WhatsAppButton>
           <a
             href="#servicos"
             className="rounded-full border border-white/40 text-white px-8 py-4 text-xs tracking-[0.2em] font-medium uppercase transition-colors hover:border-white"
@@ -72,16 +66,6 @@ export function Hero() {
             Conhecer Serviços
           </a>
         </div>
-      </div>
-
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3"
-        style={{ opacity: 1 - progress * 3 }}
-      >
-        <span className="text-[10px] tracking-[0.4em] text-white/60">SCROLL</span>
-        <span className="relative h-8 w-px overflow-hidden bg-white/20">
-          <span className="absolute left-0 top-0 h-2 w-px bg-white animate-scroll-dot" />
-        </span>
       </div>
     </section>
   )

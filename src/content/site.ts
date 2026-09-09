@@ -50,8 +50,7 @@ export const images = {
   heroBg: '/images/hero.png',
   finalCtaBg:
     'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2400&auto=format&fit=crop',
-  vini:
-    'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1600&auto=format&fit=crop',
+  vini: '/images/vini.png',
   services: {
     ppf: 'https://images.unsplash.com/photo-1600661653561-629509216228?q=80&w=1800&auto=format&fit=crop',
     ceramic: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1800&auto=format&fit=crop',

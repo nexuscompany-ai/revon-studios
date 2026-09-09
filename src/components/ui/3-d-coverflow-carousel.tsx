@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
+import { WhatsAppIcon } from "../WhatsAppIcon";
 
 // Inline Icons (Zero external dependencies)
 const ChevronLeftIcon = () => (
@@ -12,12 +13,6 @@ const ChevronLeftIcon = () => (
 const ChevronRightIcon = () => (
   <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-  </svg>
-);
-
-const ArrowRightIcon = () => (
-  <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
   </svg>
 );
 
@@ -368,20 +363,20 @@ export function CoverFlowCarousel({
                         gap: "6px",
                         padding: "7px 18px",
                         borderRadius: "9999px",
-                        background: "#ffffff",
-                        color: "#0c0a09",
+                        background: "#25D366",
+                        color: "#ffffff",
                         fontSize: "0.72rem",
                         fontWeight: 800,
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
                         textDecoration: "none",
-                        boxShadow: "0 4px 14px rgba(0,0,0,0.4), 0 0 20px rgba(255,255,255,0.35)",
+                        boxShadow: "0 4px 14px rgba(0,0,0,0.4), 0 0 20px rgba(37,211,102,0.4)",
                         cursor: "pointer",
                         transition: "transform 200ms ease, box-shadow 200ms ease",
                       }}
                     >
+                      <WhatsAppIcon className="h-3.5 w-3.5 shrink-0" />
                       <span>{item.ctaText || "View Menu"}</span>
-                      <ArrowRightIcon />
                     </a>
                   </div>
                 </div>

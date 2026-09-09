@@ -8,13 +8,16 @@ export function Founder() {
   return (
     <section id="vini" className="bg-ink text-white py-28 md:py-36">
       <div className="mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-        <div ref={imgRef} className="reveal relative aspect-[4/5] overflow-hidden bg-ink-soft order-2 md:order-1">
+        <div
+          ref={imgRef}
+          className="reveal relative aspect-[4/5] overflow-hidden bg-ink-soft order-2 md:order-1"
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.08),transparent_60%)]" />
           <img
             src={images.vini}
-            alt="Vini — fundador da Revom Studio Detail (foto ilustrativa, a ser substituída)"
-            className="h-full w-full object-cover grayscale"
+            alt="Vini — fundador da Revom Studio Detail"
+            className="relative h-full w-full object-contain object-bottom p-6"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         </div>
 
         <div ref={textRef} className="reveal order-1 md:order-2">
@@ -30,19 +33,23 @@ export function Founder() {
             Cuidado, técnica e atenção aos detalhes.
           </p>
           <p className="mt-5 text-white/55 text-sm md:text-base font-light leading-relaxed max-w-md">
-            À frente da Revom Studio Detail, Vini representa a busca constante por excelência em
-            cada projeto. A proposta da marca nasce da combinação entre técnica, cuidado e respeito
-            por cada veículo que passa pelo studio.
+            Vini lidera a Revom Studio Detail com foco em técnica e resultado — cada veículo passa
+            por um processo criterioso, do primeiro contato à entrega final.
           </p>
 
           <div className="mt-14">
             <p className="text-xs tracking-[0.4em] text-white/50 mb-6">CERTIFICAÇÕES</p>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-5">
+            <div className="grid grid-cols-2 gap-3">
               {certifications.map((cert) => (
-                <div key={cert.number} className="border-t border-white/15 pt-4">
-                  <span className="text-[10px] tracking-[0.3em] text-white/40">{cert.number}</span>
-                  <p className="mt-1 text-sm font-medium text-white/90">{cert.area}</p>
-                  <p className="text-[11px] text-white/40 mt-0.5">{cert.name} — placeholder</p>
+                <div
+                  key={cert.number}
+                  className="rounded-xl border border-white/15 bg-white/5 p-4 transition-colors hover:bg-white/10"
+                >
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/25 text-[10px] tracking-wide text-white/70">
+                    {cert.number}
+                  </span>
+                  <p className="mt-3 text-sm font-medium text-white/90 leading-snug">{cert.area}</p>
+                  <p className="text-[10px] text-white/35 mt-1">{cert.name} — placeholder</p>
                 </div>
               ))}
             </div>
