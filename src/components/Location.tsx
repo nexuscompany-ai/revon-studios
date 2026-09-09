@@ -1,6 +1,5 @@
 import { business, whatsapp } from '../content/site'
 import { useReveal } from '../hooks/useReveal'
-import { WhatsAppButton } from './WhatsAppButton'
 
 export function Location() {
   const ref = useReveal<HTMLDivElement>()
@@ -33,7 +32,14 @@ export function Location() {
             >
               Como Chegar
             </a>
-            <WhatsAppButton href={whatsapp.location}>Falar no WhatsApp</WhatsAppButton>
+            <a
+              href={whatsapp.location}
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs tracking-[0.2em] font-medium uppercase border-b border-ink pb-1 hover:opacity-60 transition-opacity"
+            >
+              Falar no WhatsApp
+            </a>
           </div>
         </div>
 

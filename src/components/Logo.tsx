@@ -3,16 +3,15 @@ type LogoProps = {
   light?: boolean
 }
 
-/** Official Revom Studio Detail wordmark. On dark/transparent hero backgrounds
- * (light=true) it's rendered inverted so the black logo reads on black. */
+/** Wordmark placeholder based on the Revom identity — swap for the official logo asset when available. */
 export function Logo({ className = '', light = false }: LogoProps) {
+  const color = light ? 'text-white' : 'text-ink'
   return (
-    <img
-      src="/images/logo.png"
-      alt="Revom Studio Detail"
-      className={`h-10 md:h-11 w-auto select-none transition-[filter] duration-300 ${
-        light ? 'invert' : ''
-      } ${className}`}
-    />
+    <div className={`flex flex-col leading-none select-none ${color} ${className}`}>
+      <span className="font-display text-xl md:text-2xl tracking-[0.15em]">REVOM</span>
+      <span className="text-[9px] md:text-[10px] tracking-[0.5em] font-sans font-light mt-0.5 opacity-70">
+        STUDIO DETAIL
+      </span>
+    </div>
   )
 }

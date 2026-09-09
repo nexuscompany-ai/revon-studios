@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Logo } from './Logo'
-import { WhatsAppButton } from './WhatsAppButton'
 import { nav, whatsapp } from '../content/site'
 
 export function Header() {
@@ -48,11 +47,18 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <WhatsAppButton href={whatsapp.nav} size="sm">
-            Solicitar Avaliação
-          </WhatsAppButton>
-        </div>
+        <a
+          href={whatsapp.nav}
+          target="_blank"
+          rel="noreferrer"
+          className={`hidden md:inline-flex items-center gap-2 rounded-full border px-6 py-3 text-xs tracking-[0.2em] font-medium uppercase transition-all duration-300 ${
+            scrolled
+              ? 'border-ink text-ink hover:bg-ink hover:text-white'
+              : 'border-white text-white hover:bg-white hover:text-ink'
+          }`}
+        >
+          Solicitar Avaliação
+        </a>
 
         <button
           aria-label="Abrir menu"
@@ -89,9 +95,15 @@ export function Header() {
               {item.label}
             </a>
           ))}
-          <WhatsAppButton href={whatsapp.nav} onClick={() => setOpen(false)} className="mt-6">
+          <a
+            href={whatsapp.nav}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => setOpen(false)}
+            className="mt-6 rounded-full border border-ink px-8 py-4 text-xs tracking-[0.2em] uppercase"
+          >
             Solicitar Avaliação
-          </WhatsAppButton>
+          </a>
         </div>
       </div>
     </header>

@@ -7,19 +7,16 @@ const WHITE = '#ffffff'
 const BLACK = '#0a0a0a'
 
 /** Gradient seam placed between a black and a white section so the color
- * change reads as a slow, soft blend instead of a hard line. Uses extra
- * stops (not just from/to) so the transition eases in and out instead of
- * ramping linearly. */
+ * change reads as a slow, soft blend instead of a hard line. A single
+ * linear ramp across a tall band keeps the per-pixel change gentle. */
 export function SectionFade({ direction }: SectionFadeProps) {
   const [start, end] = direction === 'to-dark' ? [WHITE, BLACK] : [BLACK, WHITE]
 
   return (
     <div
       aria-hidden
-      className="h-24 md:h-40 w-full"
-      style={{
-        background: `linear-gradient(to bottom, ${start} 0%, ${start} 15%, ${end} 85%, ${end} 100%)`,
-      }}
+      className="h-24 sm:h-32 md:h-56 w-full"
+      style={{ background: `linear-gradient(to bottom, ${start}, ${end})` }}
     />
   )
 }
