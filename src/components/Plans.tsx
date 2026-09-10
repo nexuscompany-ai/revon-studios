@@ -14,7 +14,9 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[number]; index: number
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       <p className="text-xs tracking-[0.4em] text-graphite mb-3">PLANO</p>
-      <h3 className="font-display text-3xl md:text-4xl leading-none">{plan.name}</h3>
+      <h3 className="font-display text-3xl md:text-4xl leading-none" style={{ color: '#ffcc03' }}>
+        {plan.name}
+      </h3>
       <p className="mt-3 text-graphite text-sm font-light leading-relaxed">{plan.summary}</p>
 
       <p className="mt-8 font-display text-4xl md:text-5xl">{plan.price}</p>
