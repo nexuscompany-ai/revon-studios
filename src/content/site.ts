@@ -97,6 +97,46 @@ export const services = [
   },
 ]
 
+// Demais serviços do catálogo — agrupados por categoria (não são os planos
+// de tratamento nem os 4 destaques do carrossel de "Nossas Soluções").
+export const otherServices = [
+  {
+    slug: 'higienizacao-bancos',
+    number: '01',
+    name: 'Higienização de Bancos',
+    description: 'Limpeza profunda, desinfecção e hidratação de bancos de couro ou tecido.',
+    priceLabel: 'A partir de R$ 195,00',
+  },
+  {
+    slug: 'protecao-vitrificacao',
+    number: '02',
+    name: 'Proteção & Vitrificação',
+    description: 'Vitrificação de pintura, plásticos, motor, faróis e bancos, com proteção de longa duração.',
+    priceLabel: 'A partir de R$ 237,90',
+  },
+  {
+    slug: 'polimento',
+    number: '03',
+    name: 'Polimento',
+    description: 'Preparação, descontaminação e polimento completo da pintura, com proteção final.',
+    priceLabel: 'R$ 730,00',
+  },
+  {
+    slug: 'moto-detail',
+    number: '04',
+    name: 'Moto Detail',
+    description: 'Tratamento técnico completo para motos, com proteção prolongada.',
+    priceLabel: 'R$ 189,00',
+  },
+  {
+    slug: 'servicos-extras',
+    number: '05',
+    name: 'Serviços Extras',
+    description: 'Descontaminação, cristalização, enceramento técnico e aplicações avulsas de PPF.',
+    priceLabel: 'A partir de R$ 120,00',
+  },
+]
+
 export const founder = {
   name: 'Vinícius Loyola',
   role: 'Fundador & especialista em detalhamento automotivo',

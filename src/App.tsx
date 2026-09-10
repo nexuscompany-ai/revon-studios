@@ -4,6 +4,7 @@ import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Manifesto } from './components/Manifesto'
 import { Services } from './components/Services'
+import { OtherServices } from './components/OtherServices'
 import { Gallery } from './components/Gallery'
 import { Plans } from './components/Plans'
 import { Founder } from './components/Founder'
@@ -22,9 +23,10 @@ function Home() {
       <Hero />
       <SectionSeam direction="to-light" variant="diagonal" />
       <Services />
-      <Plans />
+      <OtherServices />
       <Manifesto />
       <Gallery />
+      <Plans />
       <SectionSeam direction="to-dark" variant="moon" />
       <Founder />
       <SectionSeam direction="to-light" variant="diagonal" />
