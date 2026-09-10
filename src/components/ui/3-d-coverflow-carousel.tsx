@@ -155,7 +155,7 @@ export function CoverFlowCarousel({
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <div className="relative w-full max-w-6xl mx-auto px-4 z-10 flex flex-col items-center">
+      <div className="relative w-full max-w-[1440px] mx-auto px-4 z-10 flex flex-col items-center">
         {/* Eyebrow */}
         {sectionLabel && (
           <div className="flex items-center gap-3 mb-8">
@@ -197,22 +197,22 @@ export function CoverFlowCarousel({
               zIndex = 30;
               filter = "brightness(1)";
             } else if (offset === 1) {
-              transform = "translateX(285px) scale(0.84) rotateY(-24deg)";
+              transform = "translateX(340px) scale(0.84) rotateY(-24deg)";
               opacity = 0.65;
               zIndex = 20;
               filter = "brightness(0.75)";
             } else if (offset === 2) {
-              transform = "translateX(510px) scale(0.68) rotateY(-38deg)";
+              transform = "translateX(610px) scale(0.68) rotateY(-38deg)";
               opacity = 0.38;
               zIndex = 10;
               filter = "brightness(0.55) blur(1px)";
             } else if (offset === total - 1) {
-              transform = "translateX(-285px) scale(0.84) rotateY(24deg)";
+              transform = "translateX(-340px) scale(0.84) rotateY(24deg)";
               opacity = 0.65;
               zIndex = 20;
               filter = "brightness(0.75)";
             } else if (offset === total - 2) {
-              transform = "translateX(-510px) scale(0.68) rotateY(38deg)";
+              transform = "translateX(-610px) scale(0.68) rotateY(38deg)";
               opacity = 0.38;
               zIndex = 10;
               filter = "brightness(0.55) blur(1px)";

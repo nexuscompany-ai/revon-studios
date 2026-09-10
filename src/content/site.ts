@@ -62,10 +62,10 @@ export const images = {
   },
   // Trabalhos reais da Revom.
   gallery: [
-    '/images/gallery/ranger-traseira.jpeg',
-    '/images/gallery/audi-frente.jpeg',
-    '/images/gallery/fiat-interior.jpeg',
-    '/images/gallery/nissan-interior.jpeg',
+    { src: '/images/gallery/ranger-traseira.jpeg', caption: 'Ford Ranger' },
+    { src: '/images/gallery/audi-frente.jpeg', caption: 'Audi RS3' },
+    { src: '/images/gallery/fiat-interior.jpeg', caption: 'Fiat — Interior' },
+    { src: '/images/gallery/nissan-interior.jpeg', caption: 'Nissan — Interior' },
   ],
   instagram: [
     'https://images.unsplash.com/photo-1567818735868-e71b99932e29?q=80&w=1200&auto=format&fit=crop',
