@@ -67,13 +67,7 @@ export const images = {
     { src: '/images/gallery/fiat-interior.jpeg', caption: 'Fiat — Interior' },
     { src: '/images/gallery/nissan-interior.jpeg', caption: 'Nissan — Interior' },
   ],
-  instagram: [
-    'https://images.unsplash.com/photo-1567818735868-e71b99932e29?q=80&w=1200&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1592840062661-a5a7f78e2056?q=80&w=1200&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1541443131876-44b03de101c5?q=80&w=1200&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1200&auto=format&fit=crop',
-  ],
+  instagramShowcase: '/images/instagram-showcase.png',
 }
 
 export const services = [
