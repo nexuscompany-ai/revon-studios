@@ -317,7 +317,7 @@ export function CoverFlowCarousel({
                         fontWeight: 900,
                         textTransform: "uppercase",
                         letterSpacing: "0.04em",
-                        color: "#ffffff",
+                        color: "#ffcc03",
                         margin: 0,
                         lineHeight: 1.1,
                         textShadow: "0 3px 12px rgba(0,0,0,0.95)",
@@ -333,7 +333,7 @@ export function CoverFlowCarousel({
                           fontWeight: 700,
                           textTransform: "uppercase",
                           letterSpacing: "0.06em",
-                          color: "#f3f0ea",
+                          color: "#ffcc03",
                           lineHeight: 1.2,
                           textShadow: "0 3px 10px rgba(0,0,0,0.9)",
                         }}
