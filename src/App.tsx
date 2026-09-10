@@ -29,8 +29,8 @@ function Home() {
       <Founder />
       <SectionSeam direction="to-light" variant="diagonal" />
       <Testimonials />
-      <InstagramFeed />
       <Location />
+      <InstagramFeed />
       <Faq />
       <SectionSeam direction="to-dark" variant="moon" />
       <FinalCta />

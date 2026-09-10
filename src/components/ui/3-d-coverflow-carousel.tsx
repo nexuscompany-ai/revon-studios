@@ -98,8 +98,23 @@ export function CoverFlowCarousel({
 }: CoverFlowCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [isWide, setIsWide] = useState(false);
   const touchStartX = useRef(0);
   const total = items.length;
+
+  // No mobile os cards vizinhos precisam continuar espiando nas bordas
+  // (para o usuário perceber que dá pra arrastar/tocar para avançar); só no
+  // desktop, com mais espaço horizontal disponível, eles se espalham mais.
+  useEffect(() => {
+    const query = window.matchMedia("(min-width: 768px)");
+    setIsWide(query.matches);
+    const handler = (e: MediaQueryListEvent) => setIsWide(e.matches);
+    query.addEventListener("change", handler);
+    return () => query.removeEventListener("change", handler);
+  }, []);
+
+  const offset1X = isWide ? 340 : 285;
+  const offset2X = isWide ? 610 : 510;
 
   const nextSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % total);
@@ -197,22 +212,22 @@ export function CoverFlowCarousel({
               zIndex = 30;
               filter = "brightness(1)";
             } else if (offset === 1) {
-              transform = "translateX(340px) scale(0.84) rotateY(-24deg)";
+              transform = `translateX(${offset1X}px) scale(0.84) rotateY(-24deg)`;
               opacity = 0.65;
               zIndex = 20;
               filter = "brightness(0.75)";
             } else if (offset === 2) {
-              transform = "translateX(610px) scale(0.68) rotateY(-38deg)";
+              transform = `translateX(${offset2X}px) scale(0.68) rotateY(-38deg)`;
               opacity = 0.38;
               zIndex = 10;
               filter = "brightness(0.55) blur(1px)";
             } else if (offset === total - 1) {
-              transform = "translateX(-340px) scale(0.84) rotateY(24deg)";
+              transform = `translateX(-${offset1X}px) scale(0.84) rotateY(24deg)`;
               opacity = 0.65;
               zIndex = 20;
               filter = "brightness(0.75)";
             } else if (offset === total - 2) {
-              transform = "translateX(-610px) scale(0.68) rotateY(38deg)";
+              transform = `translateX(-${offset2X}px) scale(0.68) rotateY(38deg)`;
               opacity = 0.38;
               zIndex = 10;
               filter = "brightness(0.55) blur(1px)";
@@ -396,7 +411,7 @@ export function CoverFlowCarousel({
           aria-label="Previous dish"
           style={{
             position: "absolute",
-            left: "24px",
+            left: "max(24px, calc(50% - 680px))",
             top: "50%",
             transform: "translateY(-50%)",
             width: "46px",
@@ -423,7 +438,7 @@ export function CoverFlowCarousel({
           aria-label="Next dish"
           style={{
             position: "absolute",
-            right: "24px",
+            right: "max(24px, calc(50% - 680px))",
             top: "50%",
             transform: "translateY(-50%)",
             width: "46px",
