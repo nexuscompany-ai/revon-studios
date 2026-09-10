@@ -26,7 +26,7 @@ export function InstagramFeed() {
         <h2 className="mt-4 font-display text-4xl md:text-6xl leading-none">A REVOM EM MOVIMENTO</h2>
       </div>
 
-      <div ref={imageRef} className="ig-reveal mt-14 md:mt-16 w-full md:max-w-[440px] md:mx-auto">
+      <div ref={imageRef} className="ig-reveal mt-6 md:mt-8 w-full md:max-w-[440px] md:mx-auto">
         <img
           src={images.instagramShowcase}
           alt={`Perfil ${business.instagramHandle} no Instagram`}

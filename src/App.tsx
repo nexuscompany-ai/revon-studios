@@ -22,9 +22,9 @@ function Home() {
       <Hero />
       <SectionSeam direction="to-light" variant="diagonal" />
       <Services />
+      <Plans />
       <Manifesto />
       <Gallery />
-      <Plans />
       <SectionSeam direction="to-dark" variant="moon" />
       <Founder />
       <SectionSeam direction="to-light" variant="diagonal" />

@@ -403,6 +403,49 @@ export function CoverFlowCarousel({
               </div>
             );
           })}
+
+          {/* With an even item count, the "opposite" card (offset === total/2) is a
+              single unique position, so the if/else chain above can only place it on
+              one side (the positive offset branch wins). That leaves the far-left slot
+              empty on wide screens, reading as a leftover gap next to the prev arrow.
+              This decorative duplicate mirrors it onto the empty side — desktop only,
+              since mobile never reveals that far offset anyway. */}
+          {isWide && total % 2 === 0 && (
+            <div
+              aria-hidden
+              style={{
+                position: "absolute",
+                width: "330px",
+                height: "500px",
+                borderRadius: "18px",
+                overflow: "hidden",
+                backgroundColor: "#171311",
+                border: "1px solid rgba(255, 255, 255, 0.12)",
+                transform: `translateX(-${offset2X}px) scale(0.68) rotateY(38deg)`,
+                opacity: 0.38,
+                zIndex: 10,
+                filter: "brightness(0.55) blur(1px)",
+                transformOrigin: "center center",
+                transition: "all 800ms cubic-bezier(0.25, 1, 0.5, 1)",
+                boxShadow: "0 15px 35px rgba(0,0,0,0.5)",
+                pointerEvents: "none",
+              }}
+            >
+              <img
+                src={items[(currentIndex + total / 2) % total].img}
+                alt=""
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  background:
+                    "linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.68) 60%, rgba(0,0,0,0.96) 100%)",
+                }}
+              />
+            </div>
+          )}
         </div>
 
         {/* Navigation Arrows */}
