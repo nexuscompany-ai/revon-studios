@@ -17,7 +17,7 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[number]; index: number
       <h3 className="font-display text-3xl md:text-4xl leading-none" style={{ color: '#ffcc03' }}>
         {plan.name}
       </h3>
-      <p className="mt-3 text-graphite text-sm font-light leading-relaxed">{plan.summary}</p>
+      <p className="mt-3 text-graphite text-base font-light leading-relaxed">{plan.summary}</p>
 
       <p className="mt-8 font-display text-4xl md:text-5xl">{plan.price}</p>
 
@@ -25,11 +25,11 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[number]; index: number
         {plan.benefits.slice(0, 5).map((benefit) => (
           <li key={benefit} className="flex items-start gap-3">
             <CheckSeal className="h-4 w-4 mt-0.5 shrink-0 text-ink" />
-            <span className="text-sm text-ink/75 font-light leading-snug">{benefit}</span>
+            <span className="text-base text-ink/75 font-light leading-snug">{benefit}</span>
           </li>
         ))}
         {plan.benefits.length > 5 && (
-          <li className="text-xs text-graphite pl-7">+ {plan.benefits.length - 5} itens inclusos</li>
+          <li className="text-sm text-graphite pl-7">+ {plan.benefits.length - 5} itens inclusos</li>
         )}
       </ul>
 
@@ -56,7 +56,7 @@ export function Plans() {
       <div ref={headingRef} className="reveal mx-auto max-w-[1440px] px-6 md:px-10 text-center mb-16 md:mb-20">
         <p className="text-xs tracking-[0.4em] text-graphite mb-4">PLANOS</p>
         <h2 className="font-display text-4xl md:text-6xl leading-none">TRATAMENTO TÉCNICO</h2>
-        <p className="mt-4 text-graphite text-sm md:text-base font-light max-w-md mx-auto">
+        <p className="mt-4 text-graphite text-base md:text-lg font-light max-w-md mx-auto">
           Escolha o nível de cuidado ideal para o seu veículo.
         </p>
       </div>

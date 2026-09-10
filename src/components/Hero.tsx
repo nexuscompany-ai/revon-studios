@@ -50,10 +50,10 @@ export function Hero() {
           STUDIO DETAIL
         </h2>
 
-        <p className="animate-fade-up mt-8 max-w-md text-sm md:text-base text-white/80 font-light" style={{ animationDelay: '0.55s' }}>
+        <p className="animate-fade-up mt-8 max-w-md text-base md:text-lg text-white/80 font-light" style={{ animationDelay: '0.55s' }}>
           Tratamento detalhado técnico &amp; proteção.
         </p>
-        <p className="animate-fade-up mt-2 max-w-sm text-xs md:text-sm text-white/50 font-light hidden sm:block" style={{ animationDelay: '0.65s' }}>
+        <p className="animate-fade-up mt-2 max-w-sm text-sm md:text-base text-white/50 font-light hidden sm:block" style={{ animationDelay: '0.65s' }}>
           Precisão em cada detalhe. Proteção em cada acabamento.
         </p>
 

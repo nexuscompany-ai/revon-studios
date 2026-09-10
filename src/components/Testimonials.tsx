@@ -23,7 +23,7 @@ export function Testimonials() {
         <div className="mt-6 flex items-center justify-center gap-3">
           <span className="font-display text-3xl">{business.googleRating.toFixed(1)}</span>
           <Stars />
-          <span className="text-graphite text-sm font-light">
+          <span className="text-graphite text-base font-light">
             {business.googleReviewCount} avaliações no Google
           </span>
         </div>
@@ -44,12 +44,12 @@ export function Testimonials() {
                 />
                 <div>
                   <Stars />
-                  <p className="text-[11px] tracking-[0.15em] text-graphite uppercase mt-0.5">
+                  <p className="text-xs tracking-[0.15em] text-graphite uppercase mt-0.5">
                     {t.name}
                   </p>
                 </div>
               </div>
-              <p className="text-graphite text-sm font-light leading-relaxed line-clamp-3">
+              <p className="text-graphite text-base font-light leading-relaxed line-clamp-3">
                 "{t.quote}"
               </p>
             </div>

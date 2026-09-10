@@ -25,7 +25,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
         style={{ gridTemplateRows: open ? '1fr' : '0fr' }}
       >
         <div className="overflow-hidden">
-          <p className="pb-6 text-sm md:text-base text-graphite font-light leading-relaxed max-w-2xl">
+          <p className="pb-6 text-base md:text-lg text-graphite font-light leading-relaxed max-w-2xl">
             {answer}
           </p>
         </div>

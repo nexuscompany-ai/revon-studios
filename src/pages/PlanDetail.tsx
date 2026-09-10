@@ -28,7 +28,7 @@ export function PlanDetail() {
             {plan.benefits.map((benefit) => (
               <li key={benefit} className="flex items-start gap-3">
                 <CheckSeal className="h-5 w-5 mt-0.5 shrink-0 text-ink" />
-                <span className="text-sm md:text-base text-ink/80 font-light leading-relaxed">
+                <span className="text-base md:text-lg text-ink/80 font-light leading-relaxed">
                   {benefit}
                 </span>
               </li>

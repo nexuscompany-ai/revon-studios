@@ -29,7 +29,7 @@ export function Founder() {
           <div ref={textRef} className="reveal">
             <p className="text-xs tracking-[0.4em] text-white/50 mb-4">POR TRÁS DA REVOM</p>
             <h2 className="font-display text-4xl md:text-6xl leading-none uppercase">{founder.name}</h2>
-            <p className="mt-3 text-white/60 text-sm md:text-base font-light">{founder.role}</p>
+            <p className="mt-3 text-white/60 text-base md:text-lg font-light">{founder.role}</p>
           </div>
 
           <div ref={certsRef} className="reveal mt-10">
@@ -52,8 +52,8 @@ export function Founder() {
                       style={{ animationDelay: `${1.4 + i * 0.6}s` }}
                     />
                     <SealIcon className="h-6 w-6" />
-                    <p className="mt-3 text-xs font-medium text-white/90 leading-snug">{cert.area}</p>
-                    <p className="text-[10px] text-white/35 mt-1">{cert.name} — placeholder</p>
+                    <p className="mt-3 text-sm font-medium text-white/90 leading-snug">{cert.area}</p>
+                    <p className="text-xs text-white/35 mt-1">{cert.name} — placeholder</p>
                   </div>
                 </div>
               ))}

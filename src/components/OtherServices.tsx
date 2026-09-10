@@ -18,7 +18,7 @@ function ServiceRow({ item, index }: { item: (typeof otherServices)[number]; ind
       <div className="flex-1">
         <p className="text-xs tracking-[0.4em] text-graphite mb-2">{item.number}</p>
         <h3 className="font-display text-2xl md:text-3xl leading-none">{item.name}</h3>
-        <p className="mt-2 text-graphite text-sm font-light leading-relaxed max-w-xl">{item.description}</p>
+        <p className="mt-2 text-graphite text-base font-light leading-relaxed max-w-xl">{item.description}</p>
       </div>
 
       <div className="flex flex-col items-start sm:items-end gap-3 sm:shrink-0">
@@ -39,7 +39,7 @@ export function OtherServices() {
       <div ref={headingRef} className="reveal mx-auto max-w-[1440px] px-6 md:px-10 mb-12 md:mb-16">
         <p className="text-xs tracking-[0.4em] text-graphite mb-4">MAIS SERVIÇOS</p>
         <h2 className="font-display text-4xl md:text-6xl leading-none">OUTROS CUIDADOS</h2>
-        <p className="mt-4 text-graphite text-sm md:text-base font-light max-w-md">
+        <p className="mt-4 text-graphite text-base md:text-lg font-light max-w-md">
           Além dos tratamentos técnicos, cuidamos de cada detalhe extra do seu veículo.
         </p>
       </div>

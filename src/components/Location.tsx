@@ -13,7 +13,7 @@ export function Location() {
 
           <div className="mt-8 h-px w-16 bg-ink/20" />
 
-          <p className="mt-8 text-sm md:text-base font-light leading-relaxed text-ink/80">
+          <p className="mt-8 text-base md:text-lg font-light leading-relaxed text-ink/80">
             {business.address.street}
             <br />
             {business.address.neighborhood} — {business.address.cityState}
@@ -21,7 +21,7 @@ export function Location() {
             {business.address.zip}
           </p>
 
-          <p className="mt-5 text-sm md:text-base font-light text-ink/80">{business.phoneDisplay}</p>
+          <p className="mt-5 text-base md:text-lg font-light text-ink/80">{business.phoneDisplay}</p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
@@ -36,7 +36,7 @@ export function Location() {
               href={whatsapp.location}
               target="_blank"
               rel="noreferrer"
-              className="text-xs tracking-[0.2em] font-medium uppercase border-b border-ink pb-1 hover:opacity-60 transition-opacity"
+              className="text-xs tracking-[0.2em] font-medium uppercase border-b border-action text-action pb-1 hover:opacity-60 transition-opacity"
             >
               Falar no WhatsApp
             </a>

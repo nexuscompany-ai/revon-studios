@@ -20,7 +20,7 @@ export function FinalCta() {
           <br />
           COMEÇA AQUI.
         </h2>
-        <p className="mt-6 text-white/70 text-sm md:text-base font-light">
+        <p className="mt-6 text-white/70 text-base md:text-lg font-light">
           Solicite uma avaliação e descubra a solução ideal para o seu veículo.
         </p>
 

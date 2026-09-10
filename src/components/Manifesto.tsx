@@ -12,7 +12,7 @@ export function Manifesto() {
           Detalhe não é excesso.
           <br />É <Highlight>precisão</Highlight>.
         </h2>
-        <p className="mt-10 text-graphite text-sm md:text-base font-light max-w-md mx-auto leading-relaxed">
+        <p className="mt-10 text-graphite text-base md:text-lg font-light max-w-md mx-auto leading-relaxed">
           Tratamentos desenvolvidos para cuidar, recuperar e proteger cada detalhe do seu veículo.
         </p>
       </div>

@@ -14,6 +14,12 @@
   --color-line: rgba(0, 0, 0, 0.1);
   --color-line-dark: rgba(255, 255, 255, 0.14);
   --color-star: #f5c518;
+
+  /* Cor semântica de ação/conversão (WhatsApp, orçamento, CTAs de contato).
+     Única fonte da verdade — qualquer botão/ícone de ação deve usar esta
+     variável (via as classes bg-action / text-action / border-action) em
+     vez de um verde declarado localmente. */
+  --color-action: #25d366;
 }
 
 html {

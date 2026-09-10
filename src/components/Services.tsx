@@ -32,7 +32,7 @@ export function Services() {
       <div ref={headingRef} className="reveal mx-auto max-w-[1440px] px-6 md:px-10 pt-14 md:pt-16 pb-7 md:pb-8">
         <p className="text-xs tracking-[0.4em] text-graphite mb-4">SERVIÇOS</p>
         <h2 className="font-display text-4xl md:text-6xl leading-none">NOSSAS SOLUÇÕES</h2>
-        <p className="mt-4 text-graphite text-sm md:text-base font-light max-w-sm">
+        <p className="mt-4 text-graphite text-base md:text-lg font-light max-w-sm">
           Cuidado técnico para veículos que merecem mais.
         </p>
       </div>
