@@ -8,7 +8,7 @@ export function Founder() {
   const certsRef = useReveal<HTMLDivElement>()
 
   return (
-    <section id="vini" className="bg-ink text-white py-28 md:py-36 overflow-hidden">
+    <section id="vini" className="bg-ink text-white py-14 md:py-16 overflow-hidden">
       <div className="mx-auto max-w-[1440px] px-6 md:px-10 flex flex-col md:flex-row md:items-center gap-12 md:gap-20">
         {/* No mobile: nome primeiro, depois os certificados, depois a foto
             do Vini por último. No desktop: foto à esquerda, nome e

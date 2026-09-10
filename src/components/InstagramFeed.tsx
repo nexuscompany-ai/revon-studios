@@ -7,7 +7,7 @@ export function InstagramFeed() {
   const imageRef = useReveal<HTMLDivElement>({ threshold: 0.2 })
 
   return (
-    <section className="bg-paper py-28 md:py-36 overflow-hidden">
+    <section className="bg-paper py-14 md:py-16 overflow-hidden">
       <div ref={headingRef} className="reveal mx-auto max-w-[1440px] px-6 md:px-10 text-center">
         <a
           href={business.instagramUrl}

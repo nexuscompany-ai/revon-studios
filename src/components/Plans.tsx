@@ -52,7 +52,7 @@ export function Plans() {
   const headingRef = useReveal<HTMLDivElement>()
 
   return (
-    <section id="planos" className="bg-paper py-28 md:py-36">
+    <section id="planos" className="bg-paper py-14 md:py-16">
       <div ref={headingRef} className="reveal mx-auto max-w-[1440px] px-6 md:px-10 text-center mb-16 md:mb-20">
         <p className="text-xs tracking-[0.4em] text-graphite mb-4">PLANOS</p>
         <h2 className="font-display text-4xl md:text-6xl leading-none">TRATAMENTO TÉCNICO</h2>

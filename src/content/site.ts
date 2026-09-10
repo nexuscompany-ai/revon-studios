@@ -99,8 +99,8 @@ export const services = [
 
 // Demais serviços do catálogo — agrupados por categoria (não são os planos
 // de tratamento nem os 4 destaques do carrossel de "Nossas Soluções").
-// `image` fica vazio até termos as fotos reais de cada categoria — quando
-// tiver, é só preencher o caminho aqui que o card já passa a exibi-la.
+// `image` usa fotos que já temos, só como teste — trocar pelas fotos reais
+// de cada categoria assim que a Revom mandar.
 export const otherServices = [
   {
     slug: 'higienizacao-bancos',
@@ -108,7 +108,7 @@ export const otherServices = [
     name: 'Higienização de Bancos',
     description: 'Limpeza profunda, desinfecção e hidratação de bancos de couro ou tecido.',
     priceLabel: 'A partir de R$ 195,00',
-    image: '',
+    image: images.gallery[2].src,
   },
   {
     slug: 'protecao-vitrificacao',
@@ -116,7 +116,7 @@ export const otherServices = [
     name: 'Proteção & Vitrificação',
     description: 'Vitrificação de pintura, plásticos, motor, faróis e bancos, com proteção de longa duração.',
     priceLabel: 'A partir de R$ 237,90',
-    image: '',
+    image: images.services.ppf,
   },
   {
     slug: 'polimento',
@@ -124,7 +124,7 @@ export const otherServices = [
     name: 'Polimento',
     description: 'Preparação, descontaminação e polimento completo da pintura, com proteção final.',
     priceLabel: 'R$ 730,00',
-    image: '',
+    image: images.services.detailing,
   },
   {
     slug: 'moto-detail',
@@ -132,7 +132,7 @@ export const otherServices = [
     name: 'Moto Detail',
     description: 'Tratamento técnico completo para motos, com proteção prolongada.',
     priceLabel: 'R$ 189,00',
-    image: '',
+    image: images.gallery[0].src,
   },
   {
     slug: 'servicos-extras',
@@ -140,7 +140,7 @@ export const otherServices = [
     name: 'Serviços Extras',
     description: 'Descontaminação, cristalização, enceramento técnico e aplicações avulsas de PPF.',
     priceLabel: 'A partir de R$ 120,00',
-    image: '',
+    image: images.services.paintCorrection,
   },
 ]
 

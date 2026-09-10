@@ -35,7 +35,7 @@ export function OtherServices() {
   const headingRef = useReveal<HTMLDivElement>()
 
   return (
-    <section id="outros-servicos" className="bg-paper py-28 md:py-36">
+    <section id="outros-servicos" className="bg-paper py-14 md:py-16">
       <div ref={headingRef} className="reveal mx-auto max-w-[1440px] px-6 md:px-10 mb-12 md:mb-16">
         <p className="text-xs tracking-[0.4em] text-graphite mb-4">MAIS SERVIÇOS</p>
         <h2 className="font-display text-4xl md:text-6xl leading-none">OUTROS CUIDADOS</h2>

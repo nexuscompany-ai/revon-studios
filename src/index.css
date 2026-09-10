@@ -145,16 +145,16 @@ body {
   animation: floatIdle 4.6s ease-in-out infinite;
 }
 
-/* Entrada de destaque para a imagem do Instagram: pop mais perceptível
-   (sobe + aumenta de escala) do que o .reveal padrão do resto do site. */
+/* Entrada da imagem do Instagram: desliza de baixo para cima (sem escala,
+   sem "pop"), mais perceptível que o .reveal padrão do resto do site. */
 .ig-reveal {
   opacity: 0;
-  transform: translateY(56px) scale(0.9);
+  transform: translateY(90px);
   transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .ig-reveal.is-visible {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
 }
 
 /* Periodic diagonal shine sweep across each certification card. */

@@ -38,7 +38,7 @@ export function Faq() {
   const ref = useReveal<HTMLDivElement>()
 
   return (
-    <section className="bg-paper py-28 md:py-36 px-6">
+    <section className="bg-paper py-14 md:py-16 px-6">
       <div ref={ref} className="reveal mx-auto max-w-3xl">
         <div className="text-center mb-14 md:mb-16">
           <p className="text-xs tracking-[0.4em] text-graphite mb-4">DÚVIDAS</p>

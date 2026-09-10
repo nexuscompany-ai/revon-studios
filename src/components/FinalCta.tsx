@@ -6,7 +6,7 @@ export function FinalCta() {
   const ref = useReveal<HTMLDivElement>()
 
   return (
-    <section className="relative bg-ink py-36 md:py-48 px-6 overflow-hidden">
+    <section className="relative bg-ink py-16 md:py-24 px-6 overflow-hidden">
       <img
         src={images.finalCtaBg}
         alt="Detalhe automotivo Revom Studio Detail"
