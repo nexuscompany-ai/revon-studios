@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
+import { History } from './components/History'
 import { Manifesto } from './components/Manifesto'
 // `Services` (carrossel 3D "Nossas Soluções") e `OtherServices` ("Outros
 // Cuidados") estão pausados a pedido do cliente — ver nota mais abaixo,
@@ -28,14 +29,15 @@ function Home() {
     <>
       <Hero />
       <SectionSeam direction="to-light" variant="diagonal" />
+      <History />
+      <SectionSeam direction="to-dark" variant="moon" />
+      <Founder />
+      <SectionSeam direction="to-light" variant="diagonal" />
       <ServicesGrid />
       {/* <Services /> — carrossel 3D, desativado por enquanto: trocar a linha
           acima por esta, e reativar o import no topo do arquivo, pra restaurar. */}
       {/* <OtherServices /> — "Outros Cuidados", desativado por enquanto:
           descomentar esta linha e o import no topo do arquivo pra restaurar. */}
-      <SectionSeam direction="to-dark" variant="moon" />
-      <Founder />
-      <SectionSeam direction="to-light" variant="diagonal" />
       <Manifesto />
       <SectionSeam direction="to-dark" variant="diagonal" />
       <Gallery />
