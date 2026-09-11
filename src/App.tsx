@@ -28,9 +28,7 @@ function Home() {
   return (
     <>
       <Hero />
-      <SectionSeam direction="to-light" variant="diagonal" />
       <History />
-      <SectionSeam direction="to-dark" variant="moon" />
       <Founder />
       <SectionSeam direction="to-light" variant="diagonal" />
       <ServicesGrid />

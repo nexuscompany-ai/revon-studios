@@ -28,7 +28,9 @@ export function Founder() {
         <div className="order-1 md:order-2 md:flex-1">
           <div ref={textRef} className="reveal">
             <p className="text-xs tracking-[0.4em] text-white/50 mb-4">POR TRÁS DA REVOM</p>
-            <h2 className="font-display text-4xl md:text-6xl leading-none uppercase">{founder.name}</h2>
+            <h2 className="font-display text-4xl md:text-6xl leading-none uppercase" style={{ color: '#ffcc03' }}>
+              {founder.name}
+            </h2>
             <p className="mt-3 text-white/60 text-base md:text-lg font-light">{founder.role}</p>
           </div>
 
