@@ -19,7 +19,7 @@ export function SectionSeam({ direction, variant, flip = false }: SectionSeamPro
   const shape = flip ? end : start
 
   return (
-    <div aria-hidden className="relative h-12 sm:h-16 md:h-24 w-full overflow-hidden" style={{ background: base }}>
+    <div aria-hidden className="relative h-7 sm:h-9 md:h-12 w-full overflow-hidden" style={{ background: base }}>
       {variant === 'moon' ? (
         <div
           className="absolute left-1/2 -translate-x-1/2"
