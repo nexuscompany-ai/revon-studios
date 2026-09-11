@@ -3,17 +3,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { images } from '../content/site'
 import { useReveal } from '../hooks/useReveal'
 
-/** Tratamento de cor por foto (preto-e-branco que revela cor no hover, ou
- * cor direto), alternado pra dar ritmo — não é um grid genérico. Os índices
- * batem com `images.gallery` em site.ts — não reordenar sem também revisar
- * as referências diretas a esse array (Plans usa images.gallery[0] e [2]). */
-const layout = [
-  { tone: 'color' as const },
-  { tone: 'mono' as const },
-  { tone: 'color' as const },
-  { tone: 'mono' as const },
-]
-
 export function Gallery() {
   const headingRef = useReveal<HTMLDivElement>()
   const gridRef = useReveal<HTMLDivElement>()
@@ -48,10 +37,9 @@ export function Gallery() {
 
       <div
         ref={gridRef}
-        className="reveal mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4"
+        className="reveal mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-px"
       >
         {images.gallery.map((item, i) => {
-          const { tone } = layout[i] ?? layout[0]
           return (
             <button
               key={item.src}
@@ -65,9 +53,7 @@ export function Gallery() {
                 alt={item.caption}
                 loading="lazy"
                 decoding="async"
-                className={`h-full w-full object-contain transition-[filter] duration-700 ease-out ${
-                  tone === 'mono' ? 'grayscale group-hover:grayscale-0' : ''
-                }`}
+                className="h-full w-full object-contain"
               />
               <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/10" />
               <div className="absolute left-4 bottom-4 right-4 flex items-end justify-between opacity-0 translate-y-1 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
