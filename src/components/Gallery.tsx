@@ -37,7 +37,7 @@ export function Gallery() {
 
       <div
         ref={gridRef}
-        className="reveal mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-px"
+        className="reveal mx-auto max-w-[1440px] md:px-10 grid grid-cols-1 md:grid-cols-3 gap-px"
       >
         {images.gallery.map((item, i) => {
           return (
@@ -46,7 +46,9 @@ export function Gallery() {
               type="button"
               onClick={() => setOpenIndex(i)}
               aria-label={`Ampliar foto: ${item.caption}`}
-              className="gallery-tile group relative overflow-hidden bg-ink text-left cursor-zoom-in h-[82vh] sm:h-[78vh] md:h-auto md:aspect-[4/5]"
+              className={`gallery-tile group relative overflow-hidden bg-ink text-left cursor-zoom-in h-[82vh] sm:h-[78vh] md:h-auto md:aspect-[4/5] ${
+                i === 3 ? 'md:hidden' : ''
+              }`}
             >
               <img
                 src={item.src}
