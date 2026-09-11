@@ -151,6 +151,31 @@ body {
   animation: floatIdle 4.6s ease-in-out infinite;
 }
 
+/* Mosaico da Galeria: cada foto entra com um leve fade + subida, em
+   pequenos grupos (stagger curto) para dar sensação de montagem sem
+   atrasar a experiência. */
+.gallery-tile {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible .gallery-tile {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gallery-tile:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.gallery-tile:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.gallery-tile:nth-child(3) {
+  transition-delay: 0.15s;
+}
+.gallery-tile:nth-child(4) {
+  transition-delay: 0.25s;
+}
+
 /* Entrada da imagem do Instagram: desliza de baixo para cima (sem escala,
    sem "pop"), mais perceptível que o .reveal padrão do resto do site. */
 .ig-reveal {

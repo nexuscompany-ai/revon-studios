@@ -25,7 +25,9 @@ function Home() {
       <Services />
       <OtherServices />
       <Manifesto />
+      <SectionSeam direction="to-dark" variant="diagonal" />
       <Gallery />
+      <SectionSeam direction="to-light" variant="moon" />
       <Plans />
       <SectionSeam direction="to-dark" variant="moon" />
       <Founder />
