@@ -46,7 +46,7 @@ export function Gallery() {
               type="button"
               onClick={() => setOpenIndex(i)}
               aria-label={`Ampliar foto: ${item.caption}`}
-              className="gallery-tile group relative overflow-hidden bg-ink-soft text-left cursor-zoom-in h-[82vh] sm:h-[78vh] md:h-auto md:aspect-[4/5]"
+              className="gallery-tile group relative overflow-hidden bg-ink text-left cursor-zoom-in h-[82vh] sm:h-[78vh] md:h-auto md:aspect-[4/5]"
             >
               <img
                 src={item.src}
