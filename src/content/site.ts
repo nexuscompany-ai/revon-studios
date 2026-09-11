@@ -53,7 +53,7 @@ export const images = {
   // Fundo da Hero, reaproveitado também como fundo do CTA final.
   heroPoster: '/images/hero.png',
   finalCtaBg: '/images/hero.png',
-  vini: '/images/vini_revom.png',
+  vini: '/images/IMG_4628.jpeg',
   services: {
     ppf: '/images/services/ppf.png',
     ceramic: '/images/services/ceramica.jpeg',
