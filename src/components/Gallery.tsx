@@ -3,16 +3,15 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { images } from '../content/site'
 import { useReveal } from '../hooks/useReveal'
 
-/** Composição editorial fixa: cada foto tem um papel (protagonista ou
- * secundária) e um tratamento de cor deliberado, não um grid genérico.
- * Os índices batem com `images.gallery` em site.ts — não reordenar sem
- * também revisar as referências diretas a esse array (Plans usa
- * images.gallery[0] e images.gallery[2]). */
+/** Tratamento de cor por foto (preto-e-branco que revela cor no hover, ou
+ * cor direto), alternado pra dar ritmo — não é um grid genérico. Os índices
+ * batem com `images.gallery` em site.ts — não reordenar sem também revisar
+ * as referências diretas a esse array (Plans usa images.gallery[0] e [2]). */
 const layout = [
-  { span: 'col-span-2 row-span-1 md:col-span-7 md:row-span-2', tone: 'color' as const },
-  { span: 'col-span-1 row-span-1 md:col-span-5', tone: 'mono' as const },
-  { span: 'col-span-1 row-span-1 md:col-span-5', tone: 'color' as const },
-  { span: 'col-span-2 row-span-1 md:col-span-12', tone: 'mono' as const },
+  { tone: 'color' as const },
+  { tone: 'mono' as const },
+  { tone: 'color' as const },
+  { tone: 'mono' as const },
 ]
 
 export function Gallery() {
@@ -49,17 +48,17 @@ export function Gallery() {
 
       <div
         ref={gridRef}
-        className="reveal mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-2 md:grid-cols-12 auto-rows-[190px] sm:auto-rows-[220px] md:auto-rows-[240px] lg:auto-rows-[300px] gap-2 md:gap-3 lg:gap-4"
+        className="reveal mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4"
       >
         {images.gallery.map((item, i) => {
-          const { span, tone } = layout[i] ?? layout[0]
+          const { tone } = layout[i] ?? layout[0]
           return (
             <button
               key={item.src}
               type="button"
               onClick={() => setOpenIndex(i)}
               aria-label={`Ampliar foto: ${item.caption}`}
-              className={`gallery-tile group relative overflow-hidden bg-ink-soft text-left cursor-zoom-in ${span}`}
+              className="gallery-tile group relative overflow-hidden bg-ink-soft text-left cursor-zoom-in h-[82vh] sm:h-[78vh] md:h-auto md:aspect-[4/5]"
             >
               <img
                 src={item.src}
