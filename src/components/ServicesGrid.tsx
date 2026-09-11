@@ -1,6 +1,5 @@
 import { services, waLink } from '../content/site'
 import { useReveal } from '../hooks/useReveal'
-import { WhatsAppButton } from './WhatsAppButton'
 
 /** Card individual: imagem com overlay escuro e nome/descrição centralizados,
  * inspirado numa referência de grade que o cliente gostou — adaptado à
@@ -25,9 +24,14 @@ function ServiceCard({ item, index }: { item: (typeof services)[number]; index: 
       <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
         <h3 className="font-display text-2xl md:text-3xl leading-none text-white">{item.name}</h3>
         <p className="mt-3 max-w-[240px] text-xs tracking-[0.15em] uppercase text-white/70">{item.description}</p>
-        <WhatsAppButton href={waLink(item.name)} variant="outline" size="sm" className="mt-5">
-          Saiba mais
-        </WhatsAppButton>
+        <a
+          href={waLink(item.name)}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-5 text-xs tracking-[0.2em] uppercase text-white border-b border-white/40 pb-1 hover:opacity-70 transition-opacity"
+        >
+          Saiba mais →
+        </a>
       </div>
     </div>
   )

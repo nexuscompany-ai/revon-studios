@@ -10,7 +10,9 @@ import { Manifesto } from './components/Manifesto'
 import { ServicesGrid } from './components/ServicesGrid'
 // import { OtherServices } from './components/OtherServices'
 import { Gallery } from './components/Gallery'
-import { Plans } from './components/Plans'
+// `Plans` ("Tratamento Técnico") está pausada a pedido do cliente — ver nota
+// mais abaixo, junto de onde ela entrava no layout, para restaurar.
+// import { Plans } from './components/Plans'
 import { Founder } from './components/Founder'
 import { Testimonials } from './components/Testimonials'
 import { InstagramFeed } from './components/InstagramFeed'
@@ -31,14 +33,15 @@ function Home() {
           acima por esta, e reativar o import no topo do arquivo, pra restaurar. */}
       {/* <OtherServices /> — "Outros Cuidados", desativado por enquanto:
           descomentar esta linha e o import no topo do arquivo pra restaurar. */}
+      <SectionSeam direction="to-dark" variant="moon" />
+      <Founder />
+      <SectionSeam direction="to-light" variant="diagonal" />
       <Manifesto />
       <SectionSeam direction="to-dark" variant="diagonal" />
       <Gallery />
       <SectionSeam direction="to-light" variant="moon" />
-      <Plans />
-      <SectionSeam direction="to-dark" variant="moon" />
-      <Founder />
-      <SectionSeam direction="to-light" variant="diagonal" />
+      {/* <Plans /> — "Tratamento Técnico", desativada por enquanto: descomentar
+          esta linha e o import no topo do arquivo pra restaurar. */}
       <Testimonials />
       <Location />
       <InstagramFeed />
