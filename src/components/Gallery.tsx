@@ -46,7 +46,7 @@ export function Gallery() {
               type="button"
               onClick={() => setOpenIndex(i)}
               aria-label={`Ampliar foto: ${item.caption}`}
-              className={`gallery-tile group relative overflow-hidden bg-ink text-left cursor-zoom-in h-[82vh] sm:h-[78vh] md:h-auto md:aspect-[4/5] ${
+              className={`gallery-tile group relative overflow-hidden bg-ink text-left cursor-zoom-in md:aspect-[4/5] ${
                 i === 3 ? 'md:hidden' : ''
               }`}
             >
@@ -55,7 +55,7 @@ export function Gallery() {
                 alt={item.caption}
                 loading="lazy"
                 decoding="async"
-                className="h-full w-full object-contain"
+                className="w-full h-auto md:h-full md:object-contain"
               />
               <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/10" />
               <div className="absolute left-4 bottom-4 right-4 flex items-end justify-between opacity-0 translate-y-1 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
