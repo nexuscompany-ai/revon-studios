@@ -28,10 +28,7 @@ function Home() {
       <Hero />
       <History />
       <Founder />
-      {/* Transição suave (gradiente, sem recorte geométrico) do preto da
-          seção do Vini pro branco dos Depoimentos — pedido explícito do
-          cliente pra não ter uma linha/corte nítido aqui. */}
-      <div aria-hidden className="h-24 sm:h-32 md:h-40 w-full bg-gradient-to-b from-ink to-paper" />
+      <SectionSeam direction="to-light" variant="diagonal-reverse" />
       <Testimonials />
       <SectionSeam direction="to-dark" variant="diagonal" />
       <Gallery />

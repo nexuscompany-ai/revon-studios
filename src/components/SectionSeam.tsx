@@ -1,8 +1,10 @@
 type SectionSeamProps = {
   /** Cor de chegada: 'to-dark' encerra em preto, 'to-light' encerra em branco. */
   direction: 'to-dark' | 'to-light'
-  /** Recorte geométrico usado na costura entre as seções. */
-  variant: 'moon' | 'diagonal'
+  /** Recorte geométrico usado na costura entre as seções. `diagonal` desce
+   * da esquerda pra direita; `diagonal-reverse` é o espelho (desce da
+   * direita pra baixo), pra criar contraste com uma diagonal vizinha. */
+  variant: 'moon' | 'diagonal' | 'diagonal-reverse'
   /** Inverte a curva da meia-lua para cima (bico subindo em vez de descendo). */
   flip?: boolean
 }
@@ -34,7 +36,13 @@ export function SectionSeam({ direction, variant, flip = false }: SectionSeamPro
       ) : (
         <div
           className="absolute inset-0"
-          style={{ background: shape, clipPath: 'polygon(0 0, 100% 0, 100% 38%, 0 100%)' }}
+          style={{
+            background: shape,
+            clipPath:
+              variant === 'diagonal-reverse'
+                ? 'polygon(0 0, 100% 0, 100% 100%, 0 38%)'
+                : 'polygon(0 0, 100% 0, 100% 38%, 0 100%)',
+          }}
         />
       )}
     </div>

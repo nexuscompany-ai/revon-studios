@@ -15,9 +15,11 @@ export function History() {
           className="italic leading-[1.05] text-[9vw] sm:text-5xl md:text-6xl"
           style={{ color: '#ffcc03', fontFamily: 'var(--font-accent)' }}
         >
-          Nascemos da{' '}
-          <HeartIcon className="inline-block h-[0.7em] w-[0.7em] -translate-y-[0.05em] align-middle" /> pelo
-          detalhe.
+          Nascemos da paixão pelo detalhe.{' '}
+          <HeartIcon
+            className="inline-block h-[0.7em] w-[0.7em] -translate-y-[0.05em] align-middle"
+            color="#ffcc03"
+          />
         </h2>
         <p className="mt-8 text-white/60 text-base md:text-lg font-light max-w-xl mx-auto leading-relaxed">
           A Revom Studio Detail nasceu em Itapevi, da convicção de que cada carro merece ser tratado como
