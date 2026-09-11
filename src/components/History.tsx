@@ -11,8 +11,8 @@ export function History() {
       <div ref={ref} className="reveal mx-auto max-w-3xl text-center">
         <p className="text-xs tracking-[0.4em] text-white/40 mb-4">SOBRE A REVOM</p>
         <h2
-          className="font-display leading-[0.95] text-[10vw] sm:text-5xl md:text-6xl"
-          style={{ color: '#ffcc03' }}
+          className="italic leading-[1.05] text-[9vw] sm:text-5xl md:text-6xl"
+          style={{ color: '#ffcc03', fontFamily: 'var(--font-accent)' }}
         >
           Nascemos da paixão pelo detalhe.
         </h2>

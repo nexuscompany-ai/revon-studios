@@ -65,7 +65,7 @@ export function Gallery() {
                 alt={item.caption}
                 loading="lazy"
                 decoding="async"
-                className={`h-full w-full object-cover transition-[transform,filter] duration-700 ease-out group-hover:scale-[1.04] ${
+                className={`h-full w-full object-contain transition-[filter] duration-700 ease-out ${
                   tone === 'mono' ? 'grayscale group-hover:grayscale-0' : ''
                 }`}
               />
