@@ -11,9 +11,7 @@ import { Manifesto } from './components/Manifesto'
 import { ServicesGrid } from './components/ServicesGrid'
 // import { OtherServices } from './components/OtherServices'
 import { Gallery } from './components/Gallery'
-// `Plans` ("Tratamento Técnico") está pausada a pedido do cliente — ver nota
-// mais abaixo, junto de onde ela entrava no layout, para restaurar.
-// import { Plans } from './components/Plans'
+import { Plans } from './components/Plans'
 import { Founder } from './components/Founder'
 import { Testimonials } from './components/Testimonials'
 import { InstagramFeed } from './components/InstagramFeed'
@@ -30,21 +28,23 @@ function Home() {
       <Hero />
       <History />
       <Founder />
-      <SectionSeam direction="to-light" variant="diagonal" />
+      {/* Transição suave (gradiente, sem recorte geométrico) do preto da
+          seção do Vini pro branco dos Depoimentos — pedido explícito do
+          cliente pra não ter uma linha/corte nítido aqui. */}
+      <div aria-hidden className="h-24 sm:h-32 md:h-40 w-full bg-gradient-to-b from-ink to-paper" />
+      <Testimonials />
+      <SectionSeam direction="to-dark" variant="diagonal" />
+      <Gallery />
+      <SectionSeam direction="to-light" variant="moon" />
+      <Plans />
+      <Location />
+      <InstagramFeed />
       <ServicesGrid />
       {/* <Services /> — carrossel 3D, desativado por enquanto: trocar a linha
           acima por esta, e reativar o import no topo do arquivo, pra restaurar. */}
       {/* <OtherServices /> — "Outros Cuidados", desativado por enquanto:
           descomentar esta linha e o import no topo do arquivo pra restaurar. */}
       <Manifesto />
-      <SectionSeam direction="to-dark" variant="diagonal" />
-      <Gallery />
-      <SectionSeam direction="to-light" variant="moon" />
-      {/* <Plans /> — "Tratamento Técnico", desativada por enquanto: descomentar
-          esta linha e o import no topo do arquivo pra restaurar. */}
-      <Testimonials />
-      <Location />
-      <InstagramFeed />
       <Faq />
       <SectionSeam direction="to-dark" variant="moon" />
       <FinalCta />

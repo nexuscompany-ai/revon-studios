@@ -1,4 +1,5 @@
 import { useReveal } from '../hooks/useReveal'
+import { HeartIcon } from './HeartIcon'
 
 /** Seção de história/origem da Revom — texto puro por enquanto (sem barra de
  * estatísticas: números como "anos de experiência" ou "carros atendidos"
@@ -9,12 +10,14 @@ export function History() {
   return (
     <section className="bg-ink py-16 md:py-24 px-6">
       <div ref={ref} className="reveal mx-auto max-w-3xl text-center">
-        <p className="text-xs tracking-[0.4em] text-white/40 mb-4">SOBRE A REVOM</p>
+        <p className="text-xs tracking-[0.4em] text-white/40 mb-4">POR QUE ESCOLHER A REVOM?</p>
         <h2
           className="italic leading-[1.05] text-[9vw] sm:text-5xl md:text-6xl"
           style={{ color: '#ffcc03', fontFamily: 'var(--font-accent)' }}
         >
-          Nascemos da paixão pelo detalhe.
+          Nascemos da{' '}
+          <HeartIcon className="inline-block h-[0.7em] w-[0.7em] -translate-y-[0.05em] align-middle" /> pelo
+          detalhe.
         </h2>
         <p className="mt-8 text-white/60 text-base md:text-lg font-light max-w-xl mx-auto leading-relaxed">
           A Revom Studio Detail nasceu em Itapevi, da convicção de que cada carro merece ser tratado como

@@ -43,7 +43,7 @@ export const nav = [
   { label: 'Início', href: '/#hero' },
   { label: 'Serviços', href: '/#servicos' },
   { label: 'Projetos', href: '/#projetos' },
-  // { label: 'Planos', href: '/#planos' }, — seção Planos pausada por enquanto, ver App.tsx.
+  { label: 'Planos', href: '/#planos' },
   { label: 'Sobre', href: '/#vini' },
   { label: 'Contato', href: '/#localizacao' },
 ]
